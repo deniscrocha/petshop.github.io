@@ -1,0 +1,56 @@
+:root {
+  --cat-crust: #232634;
+  --cat-base: #303446;
+  --cat-blue: #8caaee;
+  --cat-red: #e78284;
+  --cat-mauve: #ca9ee6;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+header{
+  width: 100%;
+  height: 5em;
+  color: var(--cat-blue);
+  background: var(--cat-crust);
+}
+
+ul{
+  list-syle: none;
+}
+
+li{
+  display: inline;
+  float: left;
+  margin: auto;
+  text-align: center;
+  width: 45%;
+}
+
+h1{
+  height: 2em;
+  margin-top: 10px;
+}
+
+p{
+  margin-top: 25px;
+  float: left;
+  width: 100px;
+}
+a{
+  text-decoration: none;
+  color: var(--cat-blue);
+}
+
+a:hover{
+  color: var(--cat-mauve);
+}
+
+.actual-page{
+  color: var(--cat-red);
+}
+.actual-page:hover{
+  color: var(--cat-red);
+}
