@@ -10,18 +10,18 @@
   padding: 0px;
 }
 
-header{
+header {
   width: 100%;
   height: 5em;
   color: var(--cat-blue);
   background: var(--cat-crust);
 }
 
-ul{
+header > ul {
   list-syle: none;
 }
 
-li{
+header > ul > li {
   display: inline;
   float: left;
   margin: auto;
@@ -29,28 +29,28 @@ li{
   width: 45%;
 }
 
-h1{
+header > ul > li > h1 {
   height: 2em;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
-p{
+header > ul > li > p {
   margin-top: 25px;
   float: left;
   width: 100px;
 }
-a{
+header > ul > li > p > a {
   text-decoration: none;
   color: var(--cat-blue);
 }
 
-a:hover{
+header > ul > li > p > a:hover {
   color: var(--cat-mauve);
 }
 
-.actual-page{
+.actual-page {
   color: var(--cat-red);
 }
-.actual-page:hover{
+.actual-page:hover {
   color: var(--cat-red);
 }

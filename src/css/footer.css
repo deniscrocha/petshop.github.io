@@ -1,0 +1,27 @@
+:root{
+  --cat-crust: #232634;
+  --cat-base: #303446;
+  --cat-blue: #8caaee;
+  --cat-red: #e78284;
+  --cat-mauve: #ca9ee6;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+footer{
+  width: 100%;
+  height: 2em;
+  text-align: center;
+  background: var(--cat-crust);
+  margin-top: 10px;
+}
+footer>p>a{
+  text-decoration: none;
+  color: var(--cat-mauve);
+}
+footer>p>a:hover{
+  color: var(--cat-red);
+
+}
