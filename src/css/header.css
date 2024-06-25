@@ -26,18 +26,22 @@ header > ul > li {
   float: left;
   margin: auto;
   text-align: center;
-  width: 45%;
 }
-
+#links{
+  float: right;
+}
 header > ul > li > h1 {
+  float: left;
+  margin-left: 50px;
   height: 2em;
   margin-top: 15px;
 }
 
 header > ul > li > p {
   margin-top: 25px;
+  margin-right: 50px;
   float: left;
-  width: 100px;
+  margin-left: 50px;
 }
 header > ul > li > p > a {
   text-decoration: none;

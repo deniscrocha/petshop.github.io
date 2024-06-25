@@ -31,8 +31,9 @@ function newTable(){
   table.style.border = "1px solid black"
   table.style.width = "80%";
   table.style.height = "30em";
-  table.style.margin = "auto auto"
   table.style.marginTop = "30px";
+  table.style.marginLeft = "10%";
+  table.style.marginRight = "10%";
   return table;
 }
 function newTbody(){

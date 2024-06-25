@@ -26,7 +26,7 @@ main {
 }
 #calendar > button {
   float: right;
-  margin-right: 130px;
+  margin-right: 200px;
   margin-bottom: 5px;
   height: 30px;
   background: var(--cat-rosewater);
