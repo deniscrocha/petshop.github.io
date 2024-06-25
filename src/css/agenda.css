@@ -6,6 +6,7 @@
   --cat-mauve: #ca9ee6;
   --cat-rosewater: #f2d5cf;
   --cat-text: #c6d0f5;
+  --cat-lavender: #babbf1;
 }
 
 * {
@@ -17,4 +18,22 @@ body {
 }
 main {
   color: var(--cat-text);
+}
+#calendar {
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#calendar > button {
+  float: right;
+  margin-right: 130px;
+  margin-bottom: 5px;
+  height: 30px;
+  background: var(--cat-rosewater);
+  color: var(--cat-crust);
+  border-radius: 10px;
+}
+#calendar > button:hover {
+  background: var(--cat-lavender);
+  cursor: pointer;
 }

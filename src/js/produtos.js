@@ -67,11 +67,11 @@ function carrossel(direction = "") {
   if (last_product === produtos.length) {
     last_product = 0;
   }
-  document.getElementById("carrosel-name").innerText =
+  document.getElementById("carrossel-name").innerText =
     produtos[last_product].name;
-  const carroselImg = document.getElementById("carrosel-img");
+  const carroselImg = document.getElementById("carrossel-img");
   carroselImg.style.backgroundImage = "url(" + produtos[last_product].img + ")";
-  document.getElementById("carrosel-price").innerText =
+  document.getElementById("carrossel-price").innerText =
     produtos[last_product].price;
 }
 function loadProdutos() {

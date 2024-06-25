@@ -18,35 +18,39 @@ body {
 main {
   color: var(--cat-text);
 }
-#carrosel {
+#carrossel {
   border: 1px solid black;
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 22em;
   margin-right: 22em;
-  height: 15em;
+  height: 18em;
   text-align: center;
+}
+#carrossel > p {
   font-size: 20px;
 }
-#carrosel-img {
-  background-size: contain;
+#carrossel-img {
+  background-size: cover;
   border: 1px solid black;
   width: 10em;
   height: 10em;
   position: relative;
   margin: 0 auto;
   margin-bottom: 25px;
+  background-repeat: no-repeat;
 }
-#carrosel-img > button {
+#carrossel-img > button {
   border: none;
   background-color: transparent;
   cursor: pointer;
   margin-top: 45%;
   width: 20px;
+  font-size: 30px;
+  font-weight: bold;
 }
 #button-left {
   float: left;
-  background-position: right 24px center;
 }
 #button-right {
   float: right;

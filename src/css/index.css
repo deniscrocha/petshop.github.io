@@ -4,6 +4,8 @@
   --cat-blue: #8caaee;
   --cat-red: #e78284;
   --cat-mauve: #ca9ee6;
+  --cat-text: #c6d0f5;
+  --cat-rosewater: #f2d5cf;
 }
 
 *{
@@ -12,4 +14,108 @@
 }
 body{
   background: var(--cat-base);
+  color: var(--cat-text)
+}
+main{
+  height: 80em;
+}
+.petshop-fachada {
+  background-image: url("https://github.com/deniscrocha/petshop.github.io/blob/develop/public/entrada.jpg?raw=true");
+  min-height: 300px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.petshop-banhotosa{
+  border: 1px solid black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  float: left;
+  width: 30%;
+  height: 25em;
+  text-align: center;
+}
+.petshop-banhotosa > img {
+  width: 80%;
+  margin-top: 10px;
+  height: 18em;
+}
+.petshop-banhotosa > button {
+  margin-top: 10px;
+  margin-right: 20px;
+  height: 2em;
+  background: var(--cat-rosewater);
+  color: var(--cat-base)
+}
+.petshop-banhotosa > button:hover {
+  background: var(--cat-red);
+  cursor: pointer;
+}
+.petshop-product{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 10em;
+  border: 1px solid black;
+  float: right;
+  width: 50%;
+  height: 30em;
+  text-align: center;
+}
+.petshop-product > h1 > a{
+  color: var(--cat-text);
+  text-decoration: none;
+}
+.petshop-product > h1 > a:hover{
+  color: var(--cat-rosewater);
+  cursor: pointer;
+}
+.petshop-product > div{
+  height: 25em;
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+}
+#carrossel-img{
+  border:1px solid black;
+  width: 80%;
+  height: 21em;
+  margin: auto;
+  margin-top: 10px;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+}
+#carrossel > p {
+  font-size: 20px;
+}
+#carrossel-img > button{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: 25%;
+  width: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+#button-left {
+  float: left;
+}
+#button-right {
+  float: right;
+}
+.petshop-map{
+  border: 1px solid black;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  float: left;
+  width: 30%;
+  height: 20em;
+  text-align: center;
+}
+.petshop-map > iframe{
+  margin-top: 20px;
+  width: 80%;
+  height: 15em;
 }
