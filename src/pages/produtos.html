@@ -7,8 +7,9 @@
     <link href="../css/header.css" rel="stylesheet" />
     <link href="../css/produtos.css" rel="stylesheet" />
     <link href="../css/footer.css" rel="stylesheet" />
+    <script src="../js/produtos.js"></script>
   </head>
-  <body>
+  <body onload="carrosel()">
     <header>
       <ul>
         <li>
@@ -25,10 +26,10 @@
     <main>
       <!-- Criar um Carrossel com os Produtos -->
       <div id="carrosel">
-        <p>Nome</p>
+        <p id="carrosel-name">Nome</p>
         <div id="carrosel-img">
-          <button type="button" id="button-left"><</button>
-            <button type="button" id="button-right">> </button>
+          <button type="button" id="button-left" onclick="carrosel('left')"><</button>
+           <button type="button" id="button-right" onclick="carrosel('right')">> </button>
         </div>
       </div>
       <!-- Criar uma Tabela com os Produtos -->
