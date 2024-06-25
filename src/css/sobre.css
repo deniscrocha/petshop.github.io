@@ -1,0 +1,50 @@
+:root {
+  --cat-crust: #232634;
+  --cat-base: #303446;
+  --cat-blue: #8caaee;
+  --cat-red: #e78284;
+  --cat-mauve: #ca9ee6;
+  --cat-rosewater: #f2d5cf;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background: var(--cat-base);
+}
+main > div {
+  font-size: 25px;
+  width: 100%;
+}
+
+main > div > h1 {
+  text-align: center;
+}
+main > div > form {
+  text-align: center;
+  margin-top: 10px;
+}
+main > div > form > ul > li{
+  margin-top: 10px;
+}
+main > div > form > ul > li > input {
+  height: 25px;
+  width: 200px;
+  background: var(--cat-rosewater);
+}
+main > div > form > ul > li > textarea {
+  background: var(--cat-rosewater);
+}
+main > div > form > ul > li > button {
+  border-radius: 10px;
+  height: 40px;
+  width: 60px;
+  background: var(--cat-rosewater);
+  border: 1px solid black;
+  color: black;
+}
+main > div > form > ul > li > button:hover {
+  background: var(--cat-red);
+}
