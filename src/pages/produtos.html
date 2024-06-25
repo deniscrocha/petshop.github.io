@@ -9,7 +9,7 @@
     <link href="../css/footer.css" rel="stylesheet" />
     <script src="../js/produtos.js"></script>
   </head>
-  <body onload="carrosel()">
+  <body>
     <header>
       <ul>
         <li>
@@ -28,12 +28,17 @@
       <div id="carrosel">
         <p id="carrosel-name">Nome</p>
         <div id="carrosel-img">
-          <button type="button" id="button-left" onclick="carrosel('left')"><</button>
-           <button type="button" id="button-right" onclick="carrosel('right')">> </button>
+          <button type="button" id="button-left" onclick="carrossel('left')">
+            <
+          </button>
+          <button type="button" id="button-right" onclick="carrossel('right')">
+            >
+          </button>
         </div>
+        <p id="carrosel-price"></p>
       </div>
       <!-- Criar uma Tabela com os Produtos -->
-      <div id="produtos"></div>
+      <div id="produtos-div"></div>
     </main>
     <footer>
       <p>

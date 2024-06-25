@@ -51,8 +51,7 @@ main {
 #button-right {
   float: right;
 }
-#produtos {
-  border: 1px solid black;
+#produtos-div {
   width: 100%;
-  height: 25em;
+  height: 50em;
 }
