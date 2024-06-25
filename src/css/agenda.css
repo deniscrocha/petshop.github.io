@@ -1,0 +1,20 @@
+:root {
+  --cat-crust: #232634;
+  --cat-base: #303446;
+  --cat-blue: #8caaee;
+  --cat-red: #e78284;
+  --cat-mauve: #ca9ee6;
+  --cat-rosewater: #f2d5cf;
+  --cat-text: #c6d0f5;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background: var(--cat-base);
+}
+main {
+  color: var(--cat-text);
+}

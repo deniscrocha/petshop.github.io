@@ -5,6 +5,7 @@
   --cat-red: #e78284;
   --cat-mauve: #ca9ee6;
   --cat-rosewater: #f2d5cf;
+  --cat-text: #c6d0f5;
 }
 
 * {
@@ -14,12 +15,16 @@
 body {
   background: var(--cat-base);
 }
+main {
+  color: var(--cat-text);
+}
 main > div {
   font-size: 25px;
   width: 100%;
 }
 
 main > div > h1 {
+  margin-top: 10px;
   text-align: center;
 }
 main > div > form {
@@ -27,6 +32,7 @@ main > div > form {
   margin-top: 10px;
 }
 main > div > form > ul > li{
+  color: black;
   margin-top: 10px;
 }
 main > div > form > ul > li > input {
