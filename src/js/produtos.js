@@ -91,10 +91,13 @@ function loadProdutos() {
       const td = tr.insertCell();
       td.style.textAlign = "center";
       td.style.verticalAlign = "top";
+      td.style.background = "#414559";
+      td.style.borderRadius = "10px";
       const prodName = document.createElement("p");
       prodName.innerText = produtos[counter].name;
       td.appendChild(prodName);
       const prodImage = new Image(150, 130);
+      prodImage.style.borderRadius = "10px";
       prodImage.src = produtos[counter].img;
       td.appendChild(prodImage);
       const prodPrice = document.createElement("p");
@@ -107,6 +110,7 @@ function loadProdutos() {
       };
       buyButton.style.marginTop = "20px";
       buyButton.style.marginBottom = "10px";
+      buyButton.style.borderRadius = "10px";
       buyButton.style.height = "30px";
       buyButton.style.width = "100px";
       buyButton.style.color = "#232634";
