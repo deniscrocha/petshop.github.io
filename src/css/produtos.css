@@ -6,6 +6,8 @@
   --cat-mauve: #ca9ee6;
   --cat-rosewater: #f2d5cf;
   --cat-text: #c6d0f5;
+  --cat-lavender: #babbf1;
+  --cat-surface: #414559;
 }
 
 * {
@@ -20,6 +22,8 @@ main {
 }
 #carrossel {
   border: 1px solid black;
+  border-radius: 10px;
+  background: var(--cat-surface);
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 22em;
@@ -32,6 +36,7 @@ main {
 }
 #carrossel-img {
   background-size: cover;
+  border-radius: 10px;
   border: 1px solid black;
   width: 10em;
   height: 10em;

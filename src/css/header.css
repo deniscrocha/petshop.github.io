@@ -4,10 +4,14 @@
   --cat-blue: #8caaee;
   --cat-red: #e78284;
   --cat-mauve: #ca9ee6;
+  --cat-lavender: #babbf1;
 }
 * {
   margin: 0px;
   padding: 0px;
+  font-family: "Bitter", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 header {
@@ -27,7 +31,7 @@ header > ul > li {
   margin: auto;
   text-align: center;
 }
-#links{
+#links {
   float: right;
 }
 header > ul > li > h1 {
@@ -46,6 +50,7 @@ header > ul > li > p {
 header > ul > li > p > a {
   text-decoration: none;
   color: var(--cat-blue);
+  font-size: 20px;
 }
 
 header > ul > li > p > a:hover {

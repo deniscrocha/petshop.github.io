@@ -5,10 +5,14 @@
   --cat-red: #e78284;
   --cat-mauve: #ca9ee6;
   --cat-text: #c6d0f5;
+  --cat-lavender: #babbf1;
 }
 * {
   margin: 0px;
   padding: 0px;
+  font-family: "Bitter", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 main {
   min-height: calc(100vh - 70px);
@@ -20,6 +24,7 @@ footer {
   text-align: center;
   background: var(--cat-crust);
   color: var(--cat-text);
+  font-size: 20px;
 }
 footer > p > a {
   text-decoration: none;

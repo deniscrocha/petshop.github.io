@@ -6,11 +6,16 @@
   --cat-mauve: #ca9ee6;
   --cat-text: #c6d0f5;
   --cat-rosewater: #f2d5cf;
+  --cat-surface: #414559;
+  --cat-lavender: #babbf1;
 }
 
 *{
   margin: 0px;
   padding: 0px;
+  font-family: "Bitter", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 body{
   background: var(--cat-base);
@@ -29,7 +34,9 @@ main{
 }
 .petshop-banhotosa{
   border: 1px solid black;
-  margin-top: 20px;
+  border-radius: 10px;
+  background: var(--cat-surface);
+  margin-top: 30px;
   margin-bottom: 20px;
   margin-left: 20px;
   float: left;
@@ -38,6 +45,7 @@ main{
   text-align: center;
 }
 .petshop-banhotosa > img {
+  border-radius: 10px;
   width: 80%;
   margin-top: 10px;
   height: 18em;
@@ -54,13 +62,15 @@ main{
   cursor: pointer;
 }
 .petshop-product{
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 20px;
   margin-right: 10em;
+  border-radius: 10px;
   border: 1px solid black;
+  background: var(--cat-surface);
   float: right;
   width: 50%;
-  height: 30em;
+  height: 35em;
   text-align: center;
 }
 .petshop-product > h1 > a{
@@ -78,11 +88,13 @@ main{
   margin-top: 20px;
 }
 #carrossel-img{
-  border:1px solid black;
+  border: 1px solid var(--cat-lavender);
+  border-radius: 10px;
   width: 80%;
   height: 21em;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   background-size: cover;
   position: relative;
   background-repeat: no-repeat;
@@ -106,7 +118,6 @@ main{
   float: right;
 }
 .petshop-map{
-  border: 1px solid black;
   margin-left: 20px;
   margin-bottom: 20px;
   float: left;
@@ -115,7 +126,7 @@ main{
   text-align: center;
 }
 .petshop-map > iframe{
-  margin-top: 20px;
-  width: 80%;
-  height: 15em;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
 }

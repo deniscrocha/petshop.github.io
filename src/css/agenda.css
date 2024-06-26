@@ -12,6 +12,9 @@
 * {
   margin: 0px;
   padding: 0px;
+  font-family: "Bitter", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 body {
   background: var(--cat-base);
@@ -20,13 +23,23 @@ main {
   color: var(--cat-text);
 }
 #calendar {
-  margin-top: 10px;
+  width: 80%;
   text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
   margin-bottom: 20px;
+}
+#calendar > table{
+  border: 1px solid black;
+  background: #81c8be;
+  width: 100%;
+  height: 30em;
+  margin-top: 30px; 
 }
 #calendar > button {
   float: right;
-  margin-right: 200px;
+  margin-top: 25px;
+  margin-right: 5px;
   margin-bottom: 5px;
   height: 30px;
   background: var(--cat-rosewater);
