@@ -1,11 +1,5 @@
-:root {
-  --cat-crust: #232634;
-  --cat-base: #303446;
-  --cat-blue: #8caaee;
-  --cat-red: #e78284;
-  --cat-mauve: #ca9ee6;
-  --cat-lavender: #babbf1;
-}
+@import url("./vars.css");
+
 * {
   margin: 0px;
   padding: 0px;
@@ -16,50 +10,34 @@
 
 header {
   width: 100%;
-  height: 5em;
+  height: 13vh;
   color: var(--cat-blue);
   background: var(--cat-crust);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-
-header > ul {
-  list-syle: none;
+header> h1{
+  font-size: 6vh;
 }
-
-header > ul > li {
-  display: inline;
-  float: left;
-  margin: auto;
-  text-align: center;
+header> div{
+  display: flex;
 }
-#links {
-  float: right;
-}
-header > ul > li > h1 {
-  float: left;
-  margin-left: 50px;
-  height: 2em;
-  margin-top: 15px;
-}
-
-header > ul > li > p {
-  margin-top: 25px;
-  margin-right: 50px;
-  float: left;
-  margin-left: 50px;
-}
-header > ul > li > p > a {
+header>div>a {
   text-decoration: none;
+  padding: 2vh;
   color: var(--cat-blue);
-  font-size: 20px;
+  font-size: 3vh;
 }
 
-header > ul > li > p > a:hover {
+header>div>a:hover {
   color: var(--cat-mauve);
 }
 
 .actual-page {
   color: var(--cat-red);
 }
+
 .actual-page:hover {
   color: var(--cat-red);
 }
