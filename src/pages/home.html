@@ -1,0 +1,44 @@
+<section>
+  <div class="petshop-fachada"></div>
+  <!-- Criar um article de banho e tosa com botao mandando para a agenda -->
+  <article class="petshop-banhotosa">
+    <h1>Banho e Toza</h1>
+    <img
+      src="https://github.com/deniscrocha/petshop.github.io/blob/develop/public/banhopet.jpg?raw=true"
+      alt="Cachorro tomando banho"
+    />
+    <button type="button" onclick="alert('Função não disponível')">
+      Marque um horario
+    </button>
+    <button type="button" onclick="saibaMaisBanhoTosa()">Saiba mais</button>
+  </article>
+  <!-- Criar um article com um produto (ou rodando produtos) que mande para a lista de produtos-->
+  <article class="petshop-product">
+    <h1><a href="./pages/produtos.html">Nossos Produtos</a></h1>
+    <div id="carrossel">
+      <p id="carrossel-name">Nome</p>
+      <div id="carrossel-img">
+        <button type="button" id="button-left" onclick="carrossel('left')">
+          <
+        </button>
+        <button type="button" id="button-right" onclick="carrossel('right')">
+          >
+        </button>
+      </div>
+      <p id="carrossel-price"></p>
+    </div>
+  </article>
+  <!-- Criar um article de como chegar na petshop -->
+  <article class="petshop-map">
+    <h1>Chegue até nós</h1>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d794.6194227783221!2d-53.807025401416546!3d-29.68631456463964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9503cb033211e16f%3A0x41fafbe0222735f!2sPra%C3%A7a%20Saldanha%20Marinho!5e0!3m2!1spt-BR!2sbr!4v1719325800177!5m2!1spt-BR!2sbr"
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </article>
+</section>
