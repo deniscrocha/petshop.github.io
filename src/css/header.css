@@ -23,14 +23,16 @@ header> h1{
 header> div{
   display: flex;
 }
-header>div>a {
-  text-decoration: none;
+header>div>button {
   padding: 2vh;
   color: var(--cat-blue);
   font-size: 3vh;
+  border: none;
+  background: var(--cat-crust);
+  cursor: pointer;
 }
 
-header>div>a:hover {
+header>div>button:hover {
   color: var(--cat-mauve);
 }
 
