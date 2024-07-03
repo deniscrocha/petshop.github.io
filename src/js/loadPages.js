@@ -9,15 +9,35 @@ function loadPage(path) {
   file.open("GET", path, true);
   file.send();
 }
-function loadHome() {
+function loadHomePages() {
   loadPage("../pages/home.html");
 }
-function loadAbout() {
+function loadAboutPages() {
   loadPage("../pages/about.html");
 }
-function loadProducts() {
+function loadProductsPages() {
   loadPage("../pages/products.html");
 }
-function loadCalendar() {
+function loadCalendarPages() {
   loadPage("../pages/calendar.html");
 }
+
+window.addEventListener("load", (_event) =>{
+  const buttonHome = document.getElementById("home-button");
+  const buttonProducts = document.getElementById("products-button");
+  const buttonAbout = document.getElementById("about-button");
+  const buttonCalendar = document.getElementById("calendar-button");
+  buttonHome.addEventListener("click", function() {
+    loadHomePages();
+  }, false)
+  buttonProducts.addEventListener("click", function() {
+    loadProductsPages();
+  }, false)
+  buttonAbout.addEventListener("click", function() {
+    loadAboutPages();
+  }, false)
+  buttonCalendar.addEventListener("click", function() {
+    loadCalendarPages();
+  }, false)
+  loadHomePages();
+})
