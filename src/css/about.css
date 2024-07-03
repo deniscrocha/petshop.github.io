@@ -1,53 +1,66 @@
-:root {
-  --cat-crust: #232634;
-  --cat-base: #303446;
-  --cat-blue: #8caaee;
-  --cat-red: #e78284;
-  --cat-mauve: #ca9ee6;
-  --cat-rosewater: #f2d5cf;
-  --cat-text: #c6d0f5;
-  --cat-lavender: #babbf1;
+@import url("./vars.css");
+
+#about-section {
+  margin: 5vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5vh;
 }
 
-* {
-  margin: 0px;
-  padding: 0px;
-  font-family: "Bitter", serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+#about-section div {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 80%;
+  height: 60vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh;
+  padding: 1vh;
+  background: var(--cat-surface);
 }
-body {
-  background: var(--cat-base);
+#about-section h3{
+  color: var(--cat-blue);
 }
-main {
+#about-section p{
   color: var(--cat-text);
+  font-size: 1.5rem;
 }
-main > div {
-  font-size: 25px;
-  width: 100%;
+#about-section a{
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--cat-blue);
+}
+#about-section a:hover{
+  color: var(--cat-mauve);
+  cursor: pointer;
 }
 
-main > div > h1 {
-  margin-top: 10px;
-  text-align: center;
+#about-section > .half-about {
+  width: 40%;
+  height: 40vh;
 }
-main > div > form {
-  text-align: center;
-  margin-top: 10px;
+
+#about-section iframe {
+  height: 40vh;
+  width: 50%;
 }
-main > div > form > ul > li{
-  color: black;
-  margin-top: 10px;
-}
-main > div > form > ul > li > input {
-  height: 25px;
+
+#about-section input {
+  height: 3.5vh;
   width: 200px;
   background: var(--cat-rosewater);
 }
-main > div > form > ul > li > textarea {
+
+#about-section textarea {
   background: var(--cat-rosewater);
 }
-main > div > form > ul > li > button {
+
+#about-section button {
   border-radius: 10px;
   height: 40px;
   width: 60px;
@@ -55,6 +68,7 @@ main > div > form > ul > li > button {
   border: 1px solid black;
   color: black;
 }
-main > div > form > ul > li > button:hover {
+
+#about-section button:hover {
   background: var(--cat-red);
 }

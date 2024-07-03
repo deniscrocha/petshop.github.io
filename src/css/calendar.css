@@ -1,27 +1,5 @@
-:root {
-  --cat-crust: #232634;
-  --cat-base: #303446;
-  --cat-blue: #8caaee;
-  --cat-red: #e78284;
-  --cat-mauve: #ca9ee6;
-  --cat-rosewater: #f2d5cf;
-  --cat-text: #c6d0f5;
-  --cat-lavender: #babbf1;
-}
+@import url("./vars.css");
 
-* {
-  margin: 0px;
-  padding: 0px;
-  font-family: "Bitter", serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-body {
-  background: var(--cat-base);
-}
-main {
-  color: var(--cat-text);
-}
 #calendar {
   width: 80%;
   text-align: center;
