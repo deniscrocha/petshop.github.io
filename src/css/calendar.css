@@ -1,30 +1,67 @@
 @import url("./vars.css");
 
-#calendar {
-  width: 80%;
+#calendar-section {
+  display: flex;
+  flex-direction: column;
+  margin: 2vh;
+  padding: 1vh;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+}
+
+#calendar-section div {
+  width: 90%;
+  display: flex;
   text-align: center;
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  gap: 1vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#calendar-section h3 {
+  font-size: 7vh;
+}
+#calendar-section button{
+  background: var(--cat-mauve);
+  width: 15vh;
+  border-radius: 5px;
+  height: 3vw;
+  font-size: 2vh;
+}
+#calendar-section input{
+  background: var(--cat-mauve);
+  border-radius: 5px;
+  width: 20vh;
+  height: 3vw;
+  font-size: 2vh;
+
+}
+#calendar-section button:hover{
+  background: var(--cat-blue);
+  cursor: pointer;
+}
+#calendar-section > calendar{
+  margin: 0px;
+  padding: 0px;
 }
 #calendar > table{
-  border: 1px solid black;
-  background: #81c8be;
   width: 100%;
-  height: 30em;
-  margin-top: 30px; 
+  height: 100%;
+  border-radius: 5px;
+  border-collapse: collapse;
 }
-#calendar > button {
-  float: right;
-  margin-top: 25px;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  height: 30px;
-  background: var(--cat-rosewater);
+#calendar > table > thead > tr > th{
+  font-weight: bold;
+  font-size: 3vh;
+  border: 1px solid black;
+  background: var(--cat-red);
   color: var(--cat-crust);
-  border-radius: 10px;
+  height: 5vw;
 }
-#calendar > button:hover {
-  background: var(--cat-lavender);
-  cursor: pointer;
+#calendar > table > tbody > tr > td{
+  width: 12vh;
+  height: 10vw;
+  border: 1px solid black;
+  background: var(--cat-surface);
 }
