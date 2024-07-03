@@ -53,7 +53,7 @@
 }
 #calendar > table > thead > tr > th{
   font-weight: bold;
-  font-size: 3vh;
+  font-size: 2vh;
   border: 1px solid black;
   background: var(--cat-red);
   color: var(--cat-crust);
