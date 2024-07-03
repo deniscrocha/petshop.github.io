@@ -8,17 +8,17 @@
       @import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap");
     </style>
     <link href="css/index.css" rel="stylesheet" />
-    <script src="./js/loadPages.js"></script>
+    <script src="./js/loadPages.js" type="module"></script>
   </head>
 
   <body>
     <header>
       <h1>Pet-Shop</h1>
       <div>
-        <button type="button" onclick="loadHome()">Home</button>
-        <button type="button" onclick="loadProducts()">Produtos</button>
-        <button type="button" onclick="loadCalendar()">Calendario</button>
-        <button type="button" onclick="loadAbout()">Sobre</button>
+        <button type="button" id="home-button">Home</button>
+        <button type="button" id="products-button">Produtos</button>
+        <button type="button" id="calendar-button">Calendario</button>
+        <button type="button" id="about-button">Sobre</button>
       </div>
     </header>
     <main id="main-content"></main>
