@@ -25,37 +25,48 @@
 }
 
 #carrossel {
-  height: 18em;
-  width: 40%;
+  height: 30vw;
+  width: 90%;
 }
 
-#produtos-div {
-  width: 80%;
-  height: 40em;
+#carrossel > div{
+  display: flex;
+  border: none;
+  margin: 1vh;
+  padding: 1vh;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1vh;
 }
 
-#carrossel > p {
-  font-size: 2rem;
+#products-div {
+  height: 40vw;
+  width: 90%;
 }
 
-#carrossel-img {
+#carrossel p {
+  font-size: 1rem;
+}
+
+#product-image {
   background-size: cover;
   border-radius: 10px;
   border: 1px solid black;
-  width: 30vh;
-  height: 15vw;
+  width: 35vh;
+  height: 20vw;
   position: relative;
   margin: 0 auto;
   margin-bottom: 25px;
   background-repeat: no-repeat;
 }
 
-#carrossel-img button {
+#carrossel button {
   border: none;
   background-color: transparent;
   cursor: pointer;
   width: 2rem;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
