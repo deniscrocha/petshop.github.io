@@ -11,6 +11,13 @@
 #home-section h3{
   color: var(--cat-blue);
 }
+#home-section a{
+  text-decoration: none;
+  color: var(--cat-lavender);
+}
+#home-section a:hover{
+  color: var(--cat-red);
+}
 .petshop-fachada {
   background-image: url("https://github.com/deniscrocha/petshop.github.io/blob/develop/public/entrada.jpg?raw=true");
   min-height: 300px;
@@ -87,6 +94,7 @@
   height: 25vw;
   border: 1px solid black;
   border-radius: 5px;
+  background: var(--cat-surface2);
 }
 .comment-name{
   font-size: 1rem;
