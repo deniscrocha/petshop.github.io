@@ -9,13 +9,17 @@ header {
   justify-content: space-around;
   align-items: center;
 }
-header> h1{
+
+header>h1 {
   font-size: 6vh;
 }
-header> div{
+
+header div {
   display: flex;
+  align-items: center;
 }
-header>div>button {
+
+header button {
   padding: 2vh;
   color: var(--cat-blue);
   font-size: 3vh;
@@ -24,7 +28,7 @@ header>div>button {
   cursor: pointer;
 }
 
-header>div>button:hover {
+header button:hover {
   color: var(--cat-mauve);
 }
 
@@ -34,4 +38,38 @@ header>div>button:hover {
 
 .actual-page:hover {
   color: var(--cat-red);
+}
+
+#hamburger {
+  visibility: hidden;
+  width: 3vh;
+  padding: 1vh;
+  height: 3vh;
+  align-self: center;
+}
+
+#hamburger:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  #hamburger {
+    visibility: visible;
+  }
+
+  #pages-header {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 10;
+    background: var(--cat-crust);
+    width: 100%;
+  }
 }

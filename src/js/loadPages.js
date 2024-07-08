@@ -1,9 +1,17 @@
+import loadScriptCalendar from "./calendarPage.js";
+import loadScriptProducts from "./productsPage.js";
+
 function loadPage(path) {
   const file = new XMLHttpRequest();
   file.onreadystatechange = function() {
     if (this.readyState === 4 && this.status === 200) {
       const main = document.getElementById("main-content");
       main.innerHTML = this.responseText;
+      if(path === "../pages/calendar.html"){
+        loadScriptCalendar();
+      } else if(path === "../pages/products.html"){
+        loadScriptProducts();
+      }
     }
   };
   file.open("GET", path, true);
@@ -27,6 +35,7 @@ window.addEventListener("load", (_event) =>{
   const buttonProducts = document.getElementById("products-button");
   const buttonAbout = document.getElementById("about-button");
   const buttonCalendar = document.getElementById("calendar-button");
+  const buttonBurger = document.getElementById("hamburger");
   buttonHome.addEventListener("click", function() {
     loadHomePages();
   }, false)
@@ -39,5 +48,13 @@ window.addEventListener("load", (_event) =>{
   buttonCalendar.addEventListener("click", function() {
     loadCalendarPages();
   }, false)
+  buttonBurger.addEventListener("click", function(){
+    const menu = document.getElementById("pages-header");
+    if(menu.style.visibility === "hidden"){
+      menu.style.visibility = "visible";
+    } else{
+      menu.style.visibility = "hidden";
+    }
+  })
   loadHomePages();
 })
