@@ -72,3 +72,24 @@
 #about-section button:hover {
   background: var(--cat-red);
 }
+@media screen and (max-width: 800px) {
+  #about-section {
+    margin: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1vh;
+  }
+  #about-section div {
+    width: 95%;
+  }
+  #about-section > .half-about {
+    width: 95%;
+    height: 40vh;
+  }
+  #about-section iframe {
+    height: 35vh;
+    width: 80%;
+  }
+}

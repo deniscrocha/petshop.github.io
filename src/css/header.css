@@ -57,6 +57,7 @@ header button:hover {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+    height: 10vh;
   }
 
   #hamburger {

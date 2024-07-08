@@ -8,16 +8,20 @@
   align-items: center;
   gap: 1rem;
 }
-#home-section h3{
+
+#home-section h3 {
   color: var(--cat-blue);
 }
-#home-section a{
+
+#home-section a {
   text-decoration: none;
   color: var(--cat-lavender);
 }
-#home-section a:hover{
+
+#home-section a:hover {
   color: var(--cat-red);
 }
+
 .petshop-fachada {
   background-image: url("https://github.com/deniscrocha/petshop.github.io/blob/develop/public/entrada.jpg?raw=true");
   min-height: 300px;
@@ -69,19 +73,19 @@
   cursor: pointer;
 }
 
-#home-section>#home-aboutus {
+#home-section > #home-aboutus {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
-#home-section>#comments {
+#home-section > #comments {
   width: 95%;
   height: 100vh;
 }
 
-#comments>div {
+#comments > div {
   width: 95%;
   display: flex;
   justify-content: center;
@@ -89,6 +93,7 @@
   align-items: center;
   gap: 1vh;
 }
+
 .comment-card {
   width: 35vh;
   height: 25vw;
@@ -96,16 +101,45 @@
   border-radius: 5px;
   background: var(--cat-surface2);
 }
-.comment-name{
+
+.comment-name {
   font-size: 1rem;
   color: var(--cat-red);
 }
-.comment-photo{
+
+.comment-photo {
   width: 90%;
-  height: 15vw; 
+  height: 15vw;
   border-radius: 5px;
 }
-.comment-desc{
+
+.comment-desc {
   font-size: 0.7rem;
   color: var(--cat-blue);
+}
+
+@media screen and (max-width: 800px) {
+  #home-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: no-wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  #home-section>article {
+    width: 95%;
+    height: 50vh;
+  }
+  #home-section > #comments{
+    height: 200vh;
+  }
+  #comments>div div {
+    height: 32vh;
+    
+  }
+  .comment-photo {
+    height: 25vh;
+  }
 }

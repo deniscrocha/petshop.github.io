@@ -29,7 +29,7 @@
   width: 90%;
 }
 
-#carrossel > div{
+#carrossel > div {
   display: flex;
   border: none;
   margin: 1vh;
@@ -76,4 +76,21 @@
 
 #button-right {
   float: right;
+}
+
+@media screen and (max-width: 800px) {
+  #products-section > div {
+    height: 40vh;
+    width: 95%;
+  }
+  #carrossel > div {
+    height: 30vh;
+    width: 95%;
+  }
+  #product-image{
+    height: 25vh;
+  }
+#carrossel p {
+  font-size: 1.5rem;
+}
 }

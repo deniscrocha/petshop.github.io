@@ -22,14 +22,16 @@
 #calendar-section h3 {
   font-size: 7vh;
 }
-#calendar-section button{
+
+#calendar-section button {
   background: var(--cat-mauve);
   width: 15vh;
   border-radius: 5px;
   height: 3vw;
   font-size: 2vh;
 }
-#calendar-section input{
+
+#calendar-section input {
   background: var(--cat-mauve);
   border-radius: 5px;
   width: 20vh;
@@ -37,21 +39,25 @@
   font-size: 2vh;
 
 }
-#calendar-section button:hover{
+
+#calendar-section button:hover {
   background: var(--cat-blue);
   cursor: pointer;
 }
-#calendar-section > calendar{
+
+#calendar-section>#calendar{
   margin: 0px;
   padding: 0px;
 }
-#calendar > table{
+
+#calendar>table {
   width: 100%;
   height: 100%;
   border-radius: 5px;
   border-collapse: collapse;
 }
-#calendar > table > thead > tr > th{
+
+#calendar>table>thead>tr>th {
   font-weight: bold;
   font-size: 2vh;
   border: 1px solid black;
@@ -59,9 +65,49 @@
   color: var(--cat-crust);
   height: 5vw;
 }
-#calendar > table > tbody > tr > td{
+
+#calendar>table>tbody>tr>td {
   width: 12vh;
   height: 10vw;
   border: 1px solid black;
   background: var(--cat-surface);
+}
+
+@media screen and (max-width: 800px) {
+  #calendar-section h3 {
+    font-size: 4vh;
+  }
+  #calendar-section button {
+    width: 20vh;
+    height: 10vw;
+    font-size: 2vh;
+  }
+  #calendar-section input {
+    width: 40vh;
+    height: 5vw;
+    font-size: 2vh;
+  }
+  #calendar-section button:hover {
+    background: var(--cat-mauve);
+  }
+  #calendar>table {
+    width: 100%;
+  }
+  
+  #calendar>table>thead>tr>th {
+    font-size: 1.5vh;
+    padding: 0.5vh;
+    height: 5vw;
+  }
+  
+  #calendar>table>tbody>tr>td {
+    width: 12vh;
+    height: 10vw;
+    font-size: 1vh;
+  }
+  #calendar-section {
+    height: 80vh;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
