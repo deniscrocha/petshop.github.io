@@ -46,6 +46,7 @@ header button:hover {
   padding: 1vh;
   height: 3vh;
   align-self: center;
+  background: var(--cat-crust);
 }
 
 #hamburger:hover {
@@ -54,12 +55,11 @@ header button:hover {
 
 @media screen and (max-width: 800px) {
   header {
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
-    height: 10vh;
+    height: 8vh;
   }
-
   #hamburger {
     visibility: visible;
   }

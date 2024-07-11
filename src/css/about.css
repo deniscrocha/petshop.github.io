@@ -14,7 +14,6 @@
   border: 1px solid black;
   border-radius: 10px;
   width: 80%;
-  height: 60vh;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -28,11 +27,11 @@
 }
 #about-section p{
   color: var(--cat-text);
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 #about-section a{
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: var(--cat-blue);
 }
 #about-section a:hover{
@@ -42,7 +41,6 @@
 
 #about-section > .half-about {
   width: 40%;
-  height: 40vh;
 }
 
 #about-section iframe {
@@ -86,7 +84,6 @@
   }
   #about-section > .half-about {
     width: 95%;
-    height: 40vh;
   }
   #about-section iframe {
     height: 35vh;

@@ -25,29 +25,27 @@
 
 #calendar-section button {
   background: var(--cat-mauve);
+  border: 1px solid black;
   width: 15vh;
   border-radius: 5px;
   height: 3vw;
-  font-size: 2vh;
+  font-size: 1rem;
+  color: black;
 }
 
 #calendar-section input {
   background: var(--cat-mauve);
+  border: 1px solid black;
   border-radius: 5px;
   width: 20vh;
   height: 3vw;
   font-size: 2vh;
-
+  color: black;
 }
 
 #calendar-section button:hover {
   background: var(--cat-blue);
   cursor: pointer;
-}
-
-#calendar-section>#calendar{
-  margin: 0px;
-  padding: 0px;
 }
 
 #calendar>table {
@@ -78,14 +76,14 @@
     font-size: 4vh;
   }
   #calendar-section button {
-    width: 20vh;
+    width: 25vh;
     height: 10vw;
-    font-size: 2vh;
+    font-size: 0.9rem;
   }
   #calendar-section input {
     width: 40vh;
-    height: 5vw;
-    font-size: 2vh;
+    height: 8vw;
+    font-size: font-size:0.9rem;
   }
   #calendar-section button:hover {
     background: var(--cat-mauve);
@@ -95,7 +93,7 @@
   }
   
   #calendar>table>thead>tr>th {
-    font-size: 1.5vh;
+    font-size: 1vh;
     padding: 0.5vh;
     height: 5vw;
   }
