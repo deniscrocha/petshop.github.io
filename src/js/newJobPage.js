@@ -4,6 +4,8 @@ import { createJobs } from "./calendarCrud.js";
 function loadScriptNewJob() {
   const createJob = document.getElementById("create-new-job");
   const cancelJob = document.getElementById("cancel-operation");
+  const outterCancelJob = document.getElementById("outter-cancel-operation");
+
   createJob.addEventListener("click", () => {
     const petName = document.getElementById("petName").value;
     const petRace = document.getElementById("petRace").value;
@@ -15,6 +17,9 @@ function loadScriptNewJob() {
     loadPage("../pages/calendar.html");
   });
   cancelJob.addEventListener("click", () => {
+    loadPage("../pages/calendar.html");
+  });
+  outterCancelJob.addEventListener("click", () => {
     loadPage("../pages/calendar.html");
   });
 }
