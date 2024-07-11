@@ -1,7 +1,6 @@
 export function loadJobs(id = null, month = null) {
   let jobs = localStorage.getItem("jobs");
   jobs = JSON.parse(jobs);
-  console.log(jobs);
   if (!jobs) {
     jobs = JSON.stringify(Array());
     localStorage.setItem("jobs", jobs);
@@ -16,23 +15,24 @@ export function loadJobs(id = null, month = null) {
     return null;
   }
   if (month) {
-    let monthJobs = Array();
-    for (let job in jobs) {
+    const monthJobs = Array();
+    jobs.forEach((job)=>{
       if (job.month === month) {
         monthJobs.push(job);
       }
-    }
+    });
     return monthJobs;
   }
   return jobs;
 }
 export function createJobs(name, day, month, race, type) {
   const id = generateNewId();
+  const rightMonth = parseInt(month);
   const job = {
     id: id,
     name: name,
     day: day,
-    month: month,
+    month: rightMonth,
     race: race,
     type: type,
   };

@@ -66,43 +66,70 @@
 
 #calendar>table>tbody>tr>td {
   width: 12vh;
-  height: 10vw;
+  height: 13vw;
   border: 1px solid black;
   background: var(--cat-surface);
 }
-
+#calendar>table>tbody>tr>td>div{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.calendar-petname{
+  color: var(--cat-mauve);
+}
+.calendar-day{
+  color: white;
+}
+.calendar-petrace{
+  font-size: 0.8rem;
+}
+.calendar-jobtype{
+  padding: 3px;
+  border-radius: 10px;
+  border: 1px solid black;
+  color: var(--cat-crust);
+  width: 60%;
+  font-size: 0.8rem;
+}
 @media screen and (max-width: 800px) {
   #calendar-section h3 {
     font-size: 4vh;
   }
+
   #calendar-section button {
     width: 25vh;
     height: 10vw;
     font-size: 0.9rem;
   }
+
   #calendar-section input {
     width: 40vh;
     height: 8vw;
-    font-size: font-size:0.9rem;
+    font-size: 0.9rem;
   }
+
   #calendar-section button:hover {
     background: var(--cat-mauve);
   }
+
   #calendar>table {
     width: 100%;
   }
-  
+
   #calendar>table>thead>tr>th {
     font-size: 1vh;
     padding: 0.5vh;
     height: 5vw;
   }
-  
+
   #calendar>table>tbody>tr>td {
     width: 12vh;
-    height: 10vw;
+    height: 15vw;
     font-size: 1vh;
   }
+
   #calendar-section {
     height: 80vh;
     justify-content: flex-start;
