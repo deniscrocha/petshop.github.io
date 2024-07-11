@@ -1,6 +1,7 @@
 import loadScriptCalendar from "./calendarPage.js";
 import loadScriptProducts from "./productsPage.js";
-
+import loadScriptNewJob from "./newJobPage.js";
+import {loadJobs} from "./calendarCrud.js";
 function loadPage(path) {
   const file = new XMLHttpRequest();
   file.onreadystatechange = function() {
@@ -9,8 +10,11 @@ function loadPage(path) {
       main.innerHTML = this.responseText;
       if(path === "../pages/calendar.html"){
         loadScriptCalendar();
+        loadJobs();
       } else if(path === "../pages/products.html"){
         loadScriptProducts();
+      } else if(path === "../pages/newJob.html"){
+        loadScriptNewJob();
       }
     }
   };
@@ -58,3 +62,4 @@ window.addEventListener("load", (_event) =>{
   })
   loadHomePages();
 })
+export default loadPage;
