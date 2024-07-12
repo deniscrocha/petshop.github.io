@@ -5,6 +5,7 @@
 @import url("./about.css");
 @import url("./calendar.css");
 @import url("./newjob.css");
+@import url("./allJobs.css");
 
 * {
   margin: 0px;

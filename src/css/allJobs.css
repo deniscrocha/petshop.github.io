@@ -1,0 +1,63 @@
+#alljobs-section {
+  height: 89vh;
+  margin-top: 1vh;
+}
+
+#alljobs-section div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2vh;
+}
+
+#alljobs-section div>table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 5px;
+  width: 90%;
+}
+
+#alljobs-section div>table>thead>tr>th {
+  border: 1px solid black;
+  font-weight: bold;
+  font-size: 2vh;
+  width: 15vw;
+  height: 5vh;
+  background: var(--cat-red);
+  color: var(--cat-crust);
+}
+
+#alljobs-section div>table>tbody>tr>td {
+  border: 1px solid black;
+  background: var(--cat-surface);
+  text-align: center;
+  height: 5vh;
+}
+#alljobs-section td>button {
+  border: 1px solid black;
+  padding: 0.2rem;
+  text-align: center;
+  border-radius: 5px;
+  background: var(--cat-mauve);
+}
+
+#alljobs-section td>button:hover {
+  background: var(--cat-blue);
+  cursor: pointer;
+}
+#alljobs-section div>button {
+  border: 1px solid black;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 5px;
+  background: var(--cat-mauve);
+  width: 10vw;
+  font-size: 1rem;
+}
+
+#alljobs-section div>button:hover {
+  background: var(--cat-blue);
+  cursor: pointer;
+}

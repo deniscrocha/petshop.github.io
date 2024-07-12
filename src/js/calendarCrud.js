@@ -16,7 +16,7 @@ export function loadJobs(id = null, month = null) {
   }
   if (month) {
     const monthJobs = Array();
-    jobs.forEach((job)=>{
+    jobs.forEach((job) => {
       if (job.month === month) {
         monthJobs.push(job);
       }
@@ -70,7 +70,7 @@ export function deleteJobs(id) {
 }
 function generateNewId() {
   let lastId = localStorage.getItem("lastId");
-  lastId = parseInt(lastId); 
+  lastId = parseInt(lastId);
   if (!lastId) {
     localStorage.setItem("lastId", 1);
     return 1;
