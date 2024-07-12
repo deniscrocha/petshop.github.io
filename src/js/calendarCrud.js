@@ -59,14 +59,16 @@ export function updateJobs(id, newFields) {
   return 1;
 }
 export function deleteJobs(id) {
-  let jobs = loadJobs();
-  jobs.forEach((job, index) => {
+  const oldJobs = loadJobs();
+  let newJobs = Array();
+  oldJobs.forEach((job) => {
     if (job.id === id) {
-      jobs.splice(index, 1);
-      return 1;
+    } else{
+      newJobs.push(job);
     }
   });
-  return null;
+  newJobs = JSON.stringify(newJobs);
+  localStorage.setItem("jobs", newJobs);
 }
 function generateNewId() {
   let lastId = localStorage.getItem("lastId");

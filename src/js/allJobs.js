@@ -1,4 +1,4 @@
-import { loadJobs } from "./calendarCrud.js";
+import { loadJobs, deleteJobs } from "./calendarCrud.js";
 import loadPage from "./loadPages.js";
 
 export function mountJobsTable() {
@@ -7,6 +7,9 @@ export function mountJobsTable() {
     loadPage("../pages/calendar.html");
   });
   const tbody = document.getElementById("tbody-alljobs-table");
+  while (tbody.firstChild) {
+    tbody.removeChild(tbody.firstChild);
+  }
   const jobs = loadJobs();
   jobs.forEach((job, index) => {
     if (index < 10) {
@@ -25,8 +28,28 @@ export function mountJobsTable() {
       const deleteJobTd = document.createElement("td");
       const updateJob = document.createElement("button");
       updateJob.innerText = "Atualizar";
+      updateJob.onclick = function() {
+        const allJobs = loadJobs();
+        const id = job.id;
+        allJobs.forEach((job) => {
+          if (job.id === id) {
+            console.log(job);
+          }
+        });
+      };
       const deleteJob = document.createElement("button");
       deleteJob.innerText = "Deletar";
+      deleteJob.onclick = function() {
+        const allJobs = loadJobs();
+        const id = job.id;
+        allJobs.forEach((job) => {
+          if (job.id === id) {
+            deleteJobs(job.id);
+            console.log(job + "deleted");
+            mountJobsTable();
+          }
+        });
+      };
       updateJobTd.appendChild(updateJob);
       deleteJobTd.appendChild(deleteJob);
       const type = document.createElement("td");
