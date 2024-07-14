@@ -3,7 +3,7 @@
 #newjob-section {
   width: 100%;
   height: 90vh;
-  display: none;
+  display: flex;
   position: absolute;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,6 @@
 #newjob-div>img:hover {
   cursor: pointer;
 }
-
 
 #newjob-section form {
   display: flex;

@@ -8,7 +8,7 @@ export function loadScriptCalendar() {
   calendarAddEvent.addEventListener(
     "click",
     function() {
-      document.getElementById("newjob-section").style.display = "flex";
+      document.getElementById("modal-newjob").style.display = "flex";
     },
     false,
   );

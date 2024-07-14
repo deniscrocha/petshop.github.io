@@ -1,4 +1,3 @@
-import loadPage from "./loadPages.js";
 import { createNewJob } from "./jobsCrud.js";
 
 function loadScriptNewJob() {
@@ -16,14 +15,17 @@ function loadScriptNewJob() {
     const month = date.slice(5, 7);
     const day = date.slice(8);
     createNewJob({ name, day, month, race, type });
-    loadPage("../pages/calendar.html");
+    closeModal();
   });
   cancelJob.addEventListener("click", () => {
-    loadPage("../pages/calendar.html");
+    closeModal();
   });
   outterCancelJob.addEventListener("click", () => {
-    loadPage("../pages/calendar.html");
+    closeModal();
   });
+}
+function closeModal() {
+  document.getElementById("modal-newjob").style.display = "none";
 }
 
 export default loadScriptNewJob;

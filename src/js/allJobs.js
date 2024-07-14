@@ -25,15 +25,13 @@ function comebackButtonConfig() {
 function closeUpdateButtonConfig() {
   const closeUpdateButton = document.getElementById("cancel-update-button");
   closeUpdateButton.addEventListener("click", () => {
-    const updateDiv = document.getElementById("update-job");
-    updateDiv.style.display = "none";
+    document.getElementById("updatejob-modal").style.display = "none";
   });
 }
 function saveUpdateButtonConfig() {
   const saveUpdateButton = document.getElementById("save-update-button");
   saveUpdateButton.addEventListener("click", () => {
-    const updateDiv = document.getElementById("update-job");
-    updateDiv.style.display = "none";
+    document.getElementById("updatejob-modal").style.display = "none";
     const petName = document.getElementById("pet-name-update").value;
     const petRace = document.getElementById("pet-race-update").value;
     const jobDate = document.getElementById("job-date-update").value;
@@ -63,8 +61,7 @@ function saveUpdateButtonConfig() {
   });
 }
 function updateJobButton(job) {
-  const updateDiv = document.getElementById("update-job");
-  updateDiv.style.display = "flex";
+  document.getElementById("updatejob-modal").style.display = "flex";
   document.getElementById("pet-name-update").value = job.name;
   document.getElementById("pet-race-update").value = job.race;
   const date = new Date(2024, job.month - 1, job.day);
@@ -85,6 +82,7 @@ function updateJobButton(job) {
   }
   const id = document.getElementById("update-id");
   id.innerText = job.id;
+  id.className = "hidden";
 }
 function clearTable(tbody) {
   while (tbody.firstChild) {

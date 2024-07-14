@@ -24,3 +24,16 @@ main {
   flex-direction: column;
   width: 100%;
 }
+
+.modal-container {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  border: none;
+  justify-content: center;
+  align-items: center;
+}
