@@ -5,13 +5,12 @@ import mountHome from "./home.js";
 
 function loadPage(path) {
   const file = new XMLHttpRequest();
-  file.onreadystatechange = function () {
+  file.onreadystatechange = function() {
     if (this.readyState === 4 && this.status === 200) {
       const main = document.getElementById("main-content");
       main.innerHTML = this.responseText;
       if (path === "../pages/calendar.html") {
         loadScriptCalendar();
-      } else if (path === "../pages/newJob.html") {
         loadScriptNewJob();
       } else if (path === "../pages/allJobs.html") {
         mountJobsTable();
@@ -40,26 +39,26 @@ window.addEventListener("load", (_event) => {
   const buttonBurger = document.getElementById("hamburger");
   buttonHome.addEventListener(
     "click",
-    function () {
+    function() {
       loadHomePages();
     },
     false,
   );
   buttonAbout.addEventListener(
     "click",
-    function () {
+    function() {
       loadAboutPages();
     },
     false,
   );
   buttonCalendar.addEventListener(
     "click",
-    function () {
+    function() {
       loadCalendarPages();
     },
     false,
   );
-  buttonBurger.addEventListener("click", function () {
+  buttonBurger.addEventListener("click", function() {
     const menu = document.getElementById("pages-header");
     if (menu.style.visibility === "hidden") {
       menu.style.visibility = "visible";

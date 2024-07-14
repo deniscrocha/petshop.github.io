@@ -1,4 +1,4 @@
-<section id="calendar-section" >
+<section id="calendar-section">
   <div>
     <h3>Calendario da PetShop</h3>
   </div>
@@ -20,8 +20,33 @@
           <th>Sabado</th>
         </tr>
       </thead>
-      <tbody id="calendar-tbody">
-      </tbody>
+      <tbody id="calendar-tbody"></tbody>
     </table>
+  </div>
+</section>
+<section id="newjob-section">
+  <div id="newjob-div">
+    <img src="https://github.com/deniscrocha/petshop.github.io/blob/denis/public/decline.png?raw=true" alt="cancel"
+      id="outter-cancel-operation" />
+    <form>
+      <label for="petname-input">Nome do Pet:</label>
+      <input type="text" id="petName" name="petname-input" placeholder="Pet Name" /><br />
+      <label for="petrace-input">Raça do Pet:</label>
+      <input type="text" id="petRace" name="petrace-input" placeholder="Pet Race" /><br />
+      <div>
+        <p>Escolha o Tipo de Atendimento:</p>
+        <input type="radio" name="type-radio" value="1" />
+        <label for="1">Banho</label>
+        <input type="radio" name="type-radio" value="2" />
+        <label for="2">Toza</label>
+        <input type="radio" name="type-radio" value="3" />
+        <label for="3">Banho & Toza</label>
+      </div>
+      <p>Escolha a Data:</p>
+      <input type="date" id="jobDate" />
+      <br />
+      <button type="button" id="create-new-job">Enviar</button>
+      <button type="button" id="cancel-operation">Cancelar</button>
+    </form>
   </div>
 </section>
