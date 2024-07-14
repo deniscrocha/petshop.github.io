@@ -2,11 +2,9 @@
 # Todo List
 ---
 
-1. Make job update button to work.
-2. Make job creation validation.
-3. Mkae job creation only one per day.
-4. Make create job div inside Calendar page.
-5. Use fetch to push products to products page.
-
+1. Make creation job div inside Calendar page.
+2. Make a modal for job creation and job update.
+3. Make a change for two jobs at the same day.
+4. Make a carrossel animation for the clients card. 
 
 ----

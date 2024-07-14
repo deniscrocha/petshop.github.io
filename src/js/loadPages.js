@@ -2,7 +2,6 @@ import loadScriptCalendar from "./calendarPage.js";
 import loadScriptNewJob from "./newJobPage.js";
 import mountJobsTable from "./allJobs.js";
 import mountHome from "./home.js";
-import { loadJobs } from "./calendarCrud.js";
 
 function loadPage(path) {
   const file = new XMLHttpRequest();
@@ -12,7 +11,6 @@ function loadPage(path) {
       main.innerHTML = this.responseText;
       if (path === "../pages/calendar.html") {
         loadScriptCalendar();
-        loadJobs();
       } else if (path === "../pages/newJob.html") {
         loadScriptNewJob();
       } else if (path === "../pages/allJobs.html") {

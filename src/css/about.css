@@ -10,6 +10,14 @@
   gap: 5vh;
 }
 
+#about-section article{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+
+}
 #about-section div {
   border: 1px solid black;
   border-radius: 10px;
@@ -41,11 +49,12 @@
 
 #about-section > .half-about {
   width: 40%;
+  height: 60vh;
 }
 
 #about-section iframe {
   height: 40vh;
-  width: 50%;
+  width: 80%;
 }
 
 #about-section input {
