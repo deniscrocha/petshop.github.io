@@ -8,7 +8,7 @@ function mountCalendar(month) {
   while (tbody.firstChild) {
     tbody.removeChild(tbody.firstChild);
   }
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 6; i++) {
     const tr = document.createElement("tr");
     for (let j = 0; j < 7; j++) {
       const td = document.createElement("td");
@@ -23,10 +23,11 @@ function mountCalendar(month) {
       day.innerText = counter;
       day.className = "calendar-day";
       counter++;
+      console.log(jobs);
       dayDiv.appendChild(day);
       if (typeof jobs === typeof []) {
         jobs.forEach((job) => {
-          if (job.day == counter) {
+          if (parseInt(job.day) === counter-1) {
             const petName = document.createElement("p");
             petName.innerText = job.name;
             petName.className = "calendar-petname";

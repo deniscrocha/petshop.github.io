@@ -25,6 +25,17 @@ export function loadJobs(id = null, month = null) {
   }
   return jobs;
 }
+// Return false if doesn't have a job
+// Return job if find a job
+function loadJobByDay(day, month) {
+  const allJobs = loadJobs();
+  allJobs.forEach((job) => {
+    if (job.day == day && job.month == month) return job;
+  });
+  return false;
+}
+// Return false if cannot build job
+// Return true if build job
 export function createJobs(name, day, month, race, type) {
   const id = generateNewId();
   const rightMonth = parseInt(month);
@@ -37,38 +48,47 @@ export function createJobs(name, day, month, race, type) {
     type: type,
   };
   let jobs = loadJobs();
-  jobs.push(job);
-  jobs = JSON.stringify(jobs);
-  localStorage.setItem("jobs", jobs);
+  if (!loadJobByDay()) {
+    jobs.push(job);
+    jobs = JSON.stringify(jobs);
+    localStorage.setItem("jobs", jobs);
+    return true;
+  } else {
+    return false;
+  }
 }
-export function updateJobs(id, newFields) {
-  const oldJob = loadJobs((id = id));
+// return null if doesn't find a job
+// return true if update job
+export function updateJobs(findId, job) {
+  const oldJob = loadJobs((findId, 0));
   if (!oldJob) {
     return null;
   } else {
-    deleteJobs(id);
-  }
-  let newJob = oldJob;
-  for (let field in newFields) {
-    newJob[field] = newFields[field];
+    deleteJobs(findId);
   }
   let jobs = loadJobs();
-  jobs.push(newJob);
-  jobs = JSON.stringify(Array());
+  jobs.push(job);
+  jobs = JSON.stringify(jobs);
   localStorage.setItem("jobs", jobs);
-  return 1;
+  return true
 }
+
+// return true if job is deleted
+// return false if doesn't find the job
 export function deleteJobs(id) {
   const oldJobs = loadJobs();
   let newJobs = Array();
+  let jobFind = false;
   oldJobs.forEach((job) => {
     if (job.id === id) {
-    } else{
+    jobFind = true;
+    } else {
       newJobs.push(job);
     }
   });
   newJobs = JSON.stringify(newJobs);
   localStorage.setItem("jobs", newJobs);
+  return jobFind;
 }
 function generateNewId() {
   let lastId = localStorage.getItem("lastId");

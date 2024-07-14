@@ -1,24 +1,24 @@
 import loadScriptCalendar from "./calendarPage.js";
-import loadScriptProducts from "./productsPage.js";
 import loadScriptNewJob from "./newJobPage.js";
 import mountJobsTable from "./allJobs.js";
+import mountHome from "./home.js";
 import { loadJobs } from "./calendarCrud.js";
 
 function loadPage(path) {
   const file = new XMLHttpRequest();
-  file.onreadystatechange = function() {
+  file.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
       const main = document.getElementById("main-content");
       main.innerHTML = this.responseText;
       if (path === "../pages/calendar.html") {
         loadScriptCalendar();
         loadJobs();
-      } else if (path === "../pages/products.html") {
-        loadScriptProducts();
       } else if (path === "../pages/newJob.html") {
         loadScriptNewJob();
       } else if (path === "../pages/allJobs.html") {
         mountJobsTable();
+      } else if (path === "../pages/home.html") {
+        mountHome();
       }
     }
   };
@@ -31,48 +31,37 @@ function loadHomePages() {
 function loadAboutPages() {
   loadPage("../pages/about.html");
 }
-function loadProductsPages() {
-  loadPage("../pages/products.html");
-}
 function loadCalendarPages() {
   loadPage("../pages/calendar.html");
 }
 
 window.addEventListener("load", (_event) => {
   const buttonHome = document.getElementById("home-button");
-  const buttonProducts = document.getElementById("products-button");
   const buttonAbout = document.getElementById("about-button");
   const buttonCalendar = document.getElementById("calendar-button");
   const buttonBurger = document.getElementById("hamburger");
   buttonHome.addEventListener(
     "click",
-    function() {
+    function () {
       loadHomePages();
-    },
-    false,
-  );
-  buttonProducts.addEventListener(
-    "click",
-    function() {
-      loadProductsPages();
     },
     false,
   );
   buttonAbout.addEventListener(
     "click",
-    function() {
+    function () {
       loadAboutPages();
     },
     false,
   );
   buttonCalendar.addEventListener(
     "click",
-    function() {
+    function () {
       loadCalendarPages();
     },
     false,
   );
-  buttonBurger.addEventListener("click", function() {
+  buttonBurger.addEventListener("click", function () {
     const menu = document.getElementById("pages-header");
     if (menu.style.visibility === "hidden") {
       menu.style.visibility = "visible";
