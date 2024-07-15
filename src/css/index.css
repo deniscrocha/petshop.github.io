@@ -25,6 +25,32 @@ main {
   width: 100%;
 }
 
+button {
+  background: var(--cat-mauve);
+  border: 1px solid black;
+  color: black;
+  border-radius: 5px;
+}
+
+select {
+  background: var(--cat-mauve);
+  border: 1px solid black;
+  color: black;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+button:hover {
+  cursor: pointer;
+  background: var(--cat-blue);
+}
+
+select:hover {
+  cursor: pointer;
+  background: var(--cat-blue);
+}
+
 .modal-container {
   display: none;
   background-color: rgba(0, 0, 0, 0.4);
@@ -36,4 +62,15 @@ main {
   border: none;
   justify-content: center;
   align-items: center;
+}
+
+.outter-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  text-align: center;
+  background: var(--cat-surface);
 }

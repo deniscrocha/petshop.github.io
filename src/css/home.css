@@ -6,20 +6,27 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  gap: 1rem;
-}
+  gap: 1vh;
 
-#home-section h3 {
-  color: var(--cat-blue);
-}
+  & h3 {
+    color: var(--cat-blue);
+  }
 
-#home-section a {
-  text-decoration: none;
-  color: var(--cat-lavender);
-}
+  & a {
+    text-decoration: none;
+    color: var(--cat-lavender);
+  }
 
-#home-section a:hover {
-  color: var(--cat-red);
+  & a:hover {
+    color: var(--cat-red);
+  }
+
+  & article {
+    width: 48%;
+    margin: 1vh;
+    font-size: 1.2rem;
+    height: 35vw;
+  }
 }
 
 .petshop-fachada {
@@ -32,60 +39,38 @@
   background-size: cover;
 }
 
-#home-section article {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 10px;
-  text-align: center;
-  width: 45%;
-  margin: 1vh;
-  font-size: 3vh;
-  background: var(--cat-surface);
-  height: 35vw;
+.petshop-banhotosa {
+  & img {
+    border-radius: 10px;
+    width: 80%;
+    height: 40vh;
+  }
+
+  & div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2vh;
+  }
+
+  & button {
+    font-size: 2vh;
+    height: 4vh;
+    width: 20vh;
+  }
 }
 
-.petshop-banhotosa img {
-  border-radius: 10px;
-  width: 80%;
-  height: 30vh;
-}
-
-.petshop-banhotosa div {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 5vh;
-}
-
-.petshop-banhotosa button {
-  font-size: 2vh;
-  height: 4vh;
-  width: 20vh;
-  background: var(--cat-rosewater);
-  color: var(--cat-base);
-}
-
-.petshop-banhotosa button:hover {
-  background: var(--cat-red);
-  cursor: pointer;
-}
-
-#home-section > #home-aboutus {
-  display: flex;
+#home-section>#home-aboutus {
   justify-content: flex-start;
-  flex-wrap: wrap;
   gap: 1rem;
 }
 
-#home-section > #comments {
+#home-section>#comments {
   width: 95%;
-  height: 130vh;
+  height: 80vh;
 }
 
-#comments > div {
+#comments>div {
   width: 95%;
   display: flex;
   justify-content: center;
@@ -95,8 +80,8 @@
 }
 
 .comment-card {
-  width: 35vh;
-  height: 35vw;
+  width: 25vw;
+  height: 60vh;
   border: 1px solid black;
   border-radius: 5px;
   background: var(--cat-surface2);
@@ -115,7 +100,7 @@
 
 .comment-desc {
   font-size: 1rem;
-  color: var(--cat-blue);
+  color: var(--cat-text);
 }
 
 @media screen and (max-width: 800px) {
@@ -132,16 +117,19 @@
     width: 95%;
     height: 50vh;
   }
-  #home-section > #comments{
+
+  #home-section>#comments {
     height: 270vh;
   }
+
   #comments>div div {
     height: 50vh;
-    
   }
+
   .comment-photo {
     height: 35vh;
   }
+
   .petshop-banhotosa div {
     flex-direction: column;
     flex-wrap: no-wrap;

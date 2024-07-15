@@ -19,7 +19,7 @@ header div {
   align-items: center;
 }
 
-header button {
+header>div button {
   padding: 2vh;
   color: var(--cat-blue);
   font-size: 3vh;
@@ -28,16 +28,9 @@ header button {
   cursor: pointer;
 }
 
-header button:hover {
+header>div button:hover {
   color: var(--cat-mauve);
-}
-
-.actual-page {
-  color: var(--cat-red);
-}
-
-.actual-page:hover {
-  color: var(--cat-red);
+  background: var(--cat-crust);
 }
 
 #hamburger {
@@ -60,6 +53,7 @@ header button:hover {
     flex-wrap: wrap;
     height: 8vh;
   }
+
   #hamburger {
     visibility: visible;
   }

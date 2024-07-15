@@ -8,77 +8,68 @@
   align-items: center;
   justify-content: center;
   gap: 5vh;
+
+  & article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+  }
+
+  & div {
+    width: 80%;
+    margin: 0.5rem;
+    padding: 1rem;
+    gap: 1vh;
+
+    & h2 {
+      color: var(--cat-blue);
+    }
+  }
+
+  & p {
+    color: var(--cat-text);
+    font-size: 1rem;
+  }
+
+  & a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--cat-blue);
+  }
+
+  & a:hover {
+    color: var(--cat-mauve);
+    cursor: pointer;
+  }
+
+  & iframe {
+    height: 40vh;
+    width: 80%;
+  }
+
+  & input {
+    height: 3.5vh;
+    width: 200px;
+    background: var(--cat-rosewater);
+  }
+
+  & textarea {
+    background: var(--cat-rosewater);
+  }
+
+  & button {
+    height: 40px;
+    width: 60px;
+  }
 }
 
-#about-section article{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2vh;
-
-}
-#about-section div {
-  border: 1px solid black;
-  border-radius: 10px;
-  width: 80%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1vh;
-  padding: 1vh;
-  background: var(--cat-surface);
-}
-#about-section h3{
-  color: var(--cat-blue);
-}
-#about-section p{
-  color: var(--cat-text);
-  font-size: 1rem;
-}
-#about-section a{
-  text-decoration: none;
-  font-size: 1rem;
-  color: var(--cat-blue);
-}
-#about-section a:hover{
-  color: var(--cat-mauve);
-  cursor: pointer;
-}
-
-#about-section > .half-about {
+#about-section>.half-about {
   width: 40%;
   height: 60vh;
 }
 
-#about-section iframe {
-  height: 40vh;
-  width: 80%;
-}
-
-#about-section input {
-  height: 3.5vh;
-  width: 200px;
-  background: var(--cat-rosewater);
-}
-
-#about-section textarea {
-  background: var(--cat-rosewater);
-}
-
-#about-section button {
-  border-radius: 10px;
-  height: 40px;
-  width: 60px;
-  background: var(--cat-rosewater);
-  border: 1px solid black;
-  color: black;
-}
-
-#about-section button:hover {
-  background: var(--cat-red);
-}
 @media screen and (max-width: 800px) {
   #about-section {
     margin: 1vh;
@@ -88,12 +79,15 @@
     justify-content: flex-start;
     gap: 1vh;
   }
+
   #about-section div {
     width: 95%;
   }
-  #about-section > .half-about {
+
+  #about-section>.half-about {
     width: 95%;
   }
+
   #about-section iframe {
     height: 35vh;
     width: 80%;
