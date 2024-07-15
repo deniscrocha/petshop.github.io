@@ -3,7 +3,7 @@ import { createNewJob } from "./jobsCrud.js";
 function loadScriptNewJob() {
   const createJob = document.getElementById("create-new-job");
   const cancelJob = document.getElementById("cancel-operation");
-  const outterCancelJob = document.getElementById("outter-cancel-operation");
+  const outterCancelJob = document.getElementById("exit-modal-button");
 
   createJob.addEventListener("click", () => {
     const name = document.getElementById("petName").value;

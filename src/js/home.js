@@ -13,12 +13,16 @@ export function mountHome() {
 }
 function clientsCarrossel() {
   function resetInterval() {
+    clearInterval(interval);
     interval = setInterval(() => {
       lastClient = actualClient;
       actualClient = nextClient;
       nextClient = nextClient + 1;
       if (nextClient >= clientsList.length) {
         nextClient = 0;
+      }
+      if (lastClient < 0) {
+        lastClient = clientsList.length - 1;
       }
       killCards();
       buildClientCard();
@@ -31,12 +35,14 @@ function clientsCarrossel() {
   }
   function buildClientCard() {
     buildClient(clientsList[lastClient]);
+    buildLastClientButton();
     buildClient(clientsList[actualClient]);
+    buildNextClientButton();
     buildClient(clientsList[nextClient]);
     function buildClient(client) {
       const clientCard = document.createElement("div");
       clientCard.className = "comment-card";
-      const name = document.createElement("h3");
+      const name = document.createElement("h4");
       name.className = "comment-name";
       const photo = document.createElement("img");
       photo.className = "comment-photo";
@@ -51,7 +57,48 @@ function clientsCarrossel() {
       clientsCardDiv.appendChild(clientCard);
     }
   }
-
+  function buildLastClientButton() {
+    const lastClientButton = document.createElement("button");
+    lastClientButton.innerText = "<";
+    lastClientButton.style.height = "5vh";
+    lastClientButton.style.width = "2vw";
+    lastClientButton.onclick = function () {
+      lastClient = lastClient - 1;
+      nextClient = actualClient;
+      actualClient = lastClient+1;
+      if (nextClient >= clientsList.length) {
+        nextClient = 0;
+      }
+      if (lastClient < 0) {
+        lastClient = clientsList.length - 1;
+      }
+      killCards();
+      buildClientCard();
+      resetInterval();
+    };
+    clientsCardDiv.appendChild(lastClientButton);
+  }
+  function buildNextClientButton() {
+    const nextClientButton = document.createElement("button");
+    nextClientButton.innerText = ">";
+    nextClientButton.style.height = "5vh";
+    nextClientButton.style.width = "2vw";
+    nextClientButton.onclick = function () {
+      lastClient = actualClient;
+      nextClient = nextClient+1;
+      actualClient = nextClient-1;
+      if (nextClient >= clientsList.length) {
+        nextClient = 0;
+      }
+      if (lastClient < 0) {
+        lastClient = clientsList.length - 1;
+      }
+      killCards();
+      buildClientCard();
+      resetInterval();
+    };
+    clientsCardDiv.appendChild(nextClientButton);
+  }
   const clientsList = [
     {
       name: "Luis Alfonso Nenê",

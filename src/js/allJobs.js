@@ -5,6 +5,7 @@ export function mountJobsTable() {
   comebackButtonConfig();
   closeUpdateButtonConfig();
   saveUpdateButtonConfig();
+  exitModal();
   const tbody = document.getElementById("tbody-alljobs-table");
   clearTable(tbody);
   const jobs = readAllJobs();
@@ -25,6 +26,12 @@ function comebackButtonConfig() {
 function closeUpdateButtonConfig() {
   const closeUpdateButton = document.getElementById("cancel-update-button");
   closeUpdateButton.addEventListener("click", () => {
+    document.getElementById("updatejob-modal").style.display = "none";
+  });
+}
+function exitModal() {
+  const exitModalButton = document.getElementById("exit-modal-button");
+  exitModalButton.addEventListener("click", () => {
     document.getElementById("updatejob-modal").style.display = "none";
   });
 }
@@ -106,12 +113,12 @@ function mountRow(job) {
   const updateJob = document.createElement("button");
   updateJob.innerText = "Atualizar";
   updateJob.name = job.id;
-  updateJob.onclick = function() {
+  updateJob.onclick = function () {
     updateJobButton(job);
   };
   const deleteJobButton = document.createElement("button");
   deleteJobButton.innerText = "Deletar";
-  deleteJobButton.onclick = function() {
+  deleteJobButton.onclick = function () {
     deleteJob(job.id);
     mountJobsTable();
   };

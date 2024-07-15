@@ -41,6 +41,20 @@ select {
   font-size: 1rem;
 }
 
+textarea {
+  border: 1px solid black;
+  border-radius: 5px;
+  color: black;
+  background: var(--cat-pink);
+}
+
+input {
+  border: 1px solid black;
+  border-radius: 5px;
+  color: black;
+  background: var(--cat-pink);
+}
+
 button:hover {
   cursor: pointer;
   background: var(--cat-blue);
@@ -49,6 +63,17 @@ button:hover {
 select:hover {
   cursor: pointer;
   background: var(--cat-blue);
+}
+
+.outter-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  text-align: center;
+  background: var(--cat-surface);
 }
 
 .modal-container {
@@ -64,13 +89,42 @@ select:hover {
   align-items: center;
 }
 
-.outter-card {
+.modal-outter {
+  display: flex;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+  background: var(--cat-surface);
+}
+
+.modal-inner {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
+  border: 1px solid black;
+  padding: 1rem;
   border-radius: 10px;
+  height: 40vh;
+  background: var(--cat-surface1);
+}
+
+.exit-modal {
+  height: 3vh;
+  padding: 3px;
   text-align: center;
-  background: var(--cat-surface);
+  background: var(--cat-mauve);
+  border: 1px solid black;
+  width: 1vw;
+  border-radius: 5px;
+  align-self: flex-end;
+}
+.exit-modal:hover{
+  background: var(--cat-blue);
+  cursor: pointer;
 }

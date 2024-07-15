@@ -6,18 +6,18 @@
     <button type="button" id="calendar-new-event">Agendar</button>
     <button type="button" id="calendar-all-event">Mostrar Todos</button>
     <select id="calendar-selected-month">
-      <option value="1">Janeiro</option> 
-      <option value="2">Fevereiro</option> 
-      <option value="3">Março</option> 
-      <option value="4">Abril</option> 
-      <option value="5">Maio</option> 
-      <option value="6">Junho</option> 
-      <option value="7">Julho</option> 
-      <option value="8">Agosto</option> 
-      <option value="9">Setembro</option> 
-      <option value="10">Outubro</option> 
-      <option value="11">Novembro</option> 
-      <option value="12">Dezembro</option> 
+      <option value="1">Janeiro</option>
+      <option value="2">Fevereiro</option>
+      <option value="3">Março</option>
+      <option value="4">Abril</option>
+      <option value="5">Maio</option>
+      <option value="6">Junho</option>
+      <option value="7">Julho</option>
+      <option value="8">Agosto</option>
+      <option value="9">Setembro</option>
+      <option value="10">Outubro</option>
+      <option value="11">Novembro</option>
+      <option value="12">Dezembro</option>
     </select>
   </div>
   <div id="calendar">
@@ -42,30 +42,28 @@
   </div>
 </section>
 <dialog id="modal-newjob" class="modal-container">
-  <section id="newjob-section">
-    <div id="newjob-div">
-      <img src="https://github.com/deniscrocha/petshop.github.io/blob/denis/public/decline.png?raw=true" alt="cancel"
-        id="outter-cancel-operation" />
-      <form>
-        <label for="petname-input">Nome do Pet:</label>
-        <input type="text" id="petName" name="petname-input" placeholder="Pet Name" /><br />
-        <label for="petrace-input">Raça do Pet:</label>
-        <input type="text" id="petRace" name="petrace-input" placeholder="Pet Race" /><br />
-        <div>
-          <p>Escolha o Tipo de Atendimento:</p>
-          <input type="radio" name="type-radio" value="1" />
-          <label for="1">Banho</label>
-          <input type="radio" name="type-radio" value="2" />
-          <label for="2">Toza</label>
-          <input type="radio" name="type-radio" value="3" />
-          <label for="3">Banho & Toza</label>
-        </div>
-        <p>Escolha a Data:</p>
-        <input type="date" id="jobDate" />
-        <br />
+  <section id="newjob-section" class="modal-outter">
+    <p class="exit-modal" id="exit-modal-button">X</p>
+    <div id="newjob-div" class="modal-inner">
+      <label for="petname-input">Nome do Pet:</label>
+      <input type="text" id="petName" name="petname-input" placeholder="Pet Name" /><br />
+      <label for="petrace-input">Raça do Pet:</label>
+      <input type="text" id="petRace" name="petrace-input" placeholder="Pet Race" /><br />
+      <div>
+        <p>Escolha o Tipo de Atendimento:</p>
+        <input type="radio" name="type-radio" value="1" />
+        <label for="1">Banho</label>
+        <input type="radio" name="type-radio" value="2" />
+        <label for="2">Toza</label>
+        <input type="radio" name="type-radio" value="3" />
+        <label for="3">Banho & Toza</label>
+      </div>
+      <p>Escolha a Data:</p>
+      <input type="date" id="jobDate" />
+      <div>
         <button type="button" id="create-new-job">Enviar</button>
         <button type="button" id="cancel-operation">Cancelar</button>
-      </form>
+      </div>
     </div>
   </section>
 </dialog>

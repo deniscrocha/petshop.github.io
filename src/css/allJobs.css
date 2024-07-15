@@ -64,15 +64,6 @@
   cursor: pointer;
 }
 
-#alljobs-section>#update-job {
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  color: var(--cat-text);
-  align-items: center;
-  padding: 1rem;
-}
-
 #update-job>#update-job-data {
   padding: 1rem;
   display: flex;

@@ -2,8 +2,10 @@
   <article class="half-about">
     <div class="outter-card">
       <h2>Nosso Serviços</h2>
-      <p>Nós contamos com serviço de Banho, toza e medicina veterinária para seu pet
-      estár sempre saúdavel, limpo, cheiroso e feliz.</p>
+      <p>
+        Nós contamos com serviço de Banho, toza e medicina veterinária para seu
+        pet estár sempre saúdavel, limpo, cheiroso e feliz.
+      </p>
     </div>
     <div class="outter-card">
       <h2>Sobre nós</h2>
@@ -29,11 +31,15 @@
   </div>
   <div class="outter-card">
     <h2>Entre em Contato</h2>
-    Nome:<br /><input type="text" placeholder="Name" /><br />
-    Sobrenome:<br /><input type="text" placeholder="Lastname" /><br />
-    Email:<br /><input type="text" placeholder="Email" /><br />
-    Telefone:<br /><input type="text" placeholder="Number" /><br />
-    Motivo do Contato<br /><textarea rows="5" cols="50"></textarea><br />
+    <form id="contact-form">
+      <label for="form-name"> Nome Completo: </label>
+      <input type="text" name="form-name" placeholder="Name" />
+      <label for="form-email">Email:</label>
+      <input type="text" name="form-email" placeholder="Email" />
+      <label for="form-number">Telefone:</label>
+      <input type="text" name="form-number" placeholder="Number" />
+      <label>Motivo do Contato<br /><textarea rows="5" cols="50"></textarea><br /></label>
+    </form>
     <button type="button" onclick="alert('Função não disponível')">
       Enviar
     </button>
