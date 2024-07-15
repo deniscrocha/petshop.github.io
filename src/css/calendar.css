@@ -55,6 +55,15 @@
   border-collapse: collapse;
 }
 
+#calendar #selected-month {
+  font-size: 1.5rem;
+  color: var(--cat-crust);
+  font-weight: bold;
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-transform: uppercase;
+}
+
 #calendar>table>thead>tr>th {
   font-weight: bold;
   font-size: 2vh;
@@ -70,22 +79,27 @@
   border: 1px solid black;
   background: var(--cat-surface);
 }
-#calendar>table>tbody>tr>td>div{
+
+#calendar>table>tbody>tr>td>div {
   display: flex;
   width: 100%;
   flex-direction: column;
   justify-content: flex-start;
 }
-.calendar-petname{
+
+.calendar-petname {
   color: var(--cat-mauve);
 }
-.calendar-day{
+
+.calendar-day {
   color: white;
 }
-.calendar-petrace{
+
+.calendar-petrace {
   font-size: 0.8rem;
 }
-.calendar-jobtype{
+
+.calendar-jobtype {
   padding: 3px;
   border-radius: 10px;
   border: 1px solid black;
@@ -93,6 +107,7 @@
   width: 60%;
   font-size: 0.8rem;
 }
+
 @media screen and (max-width: 800px) {
   #calendar-section h3 {
     font-size: 4vh;

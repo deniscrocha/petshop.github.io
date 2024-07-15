@@ -3,10 +3,11 @@ import { readJobsByMonth } from "./jobsCrud.js";
 function mountCalendar(month) {
   const [lastDay, firstDayWeek] = getDays(month);
   const jobs = readJobsByMonth(month);
+  changeDisplayMonthCalendar(parseInt(month));
   let counter = 1 - firstDayWeek;
   const tbody = document.getElementById("calendar-tbody");
   clearCalendar(tbody);
-  for (let i = 0; i < 6; i++) {
+  while (counter - 1 <= lastDay) {
     const tr = document.createElement("tr");
     for (let j = 0; j < 7; j++) {
       const td = document.createElement("td");
@@ -29,7 +30,47 @@ function mountCalendar(month) {
     tbody.appendChild(tr);
   }
 }
-
+function changeDisplayMonthCalendar(month) {
+  const monthText = document.getElementById("selected-month");
+  switch (month) {
+    case 1:
+      monthText.innerText = "Janeiro";
+      break;
+    case 2:
+      monthText.innerText = "Fevereiro";
+      break;
+    case 3:
+      monthText.innerText = "Março";
+      break;
+    case 4:
+      monthText.innerText = "Abril";
+      break;
+    case 5:
+      monthText.innerText = "Maio";
+      break;
+    case 6:
+      monthText.innerText = "Junho";
+      break;
+    case 7:
+      monthText.innerText = "Julho";
+      break;
+    case 8:
+      monthText.innerText = "Agosto";
+      break;
+    case 9:
+      monthText.innerText = "Setembro";
+      break;
+    case 10:
+      monthText.innerText = "Outubro";
+      break;
+    case 11:
+      monthText.innerText = "Novembro";
+      break;
+    case 12:
+      monthText.innerText = "Dezembro";
+      break;
+  }
+}
 function getDays(month) {
   let date = new Date(2024, month, -1);
   const lastDay = date.getDate();
@@ -43,8 +84,9 @@ function clearCalendar(tbody) {
   }
 }
 function buildJob(jobs, div, counter) {
+  let finded = false;
   jobs.forEach((job) => {
-    if (parseInt(job.day) === counter - 1) {
+    if (job.day === counter - 1) {
       const petName = document.createElement("p");
       petName.innerText = job.name;
       petName.className = "calendar-petname";
@@ -67,9 +109,12 @@ function buildJob(jobs, div, counter) {
           type.style.background = "#a6d189";
           break;
       }
-      div.appendChild(petName);
-      div.appendChild(petRace);
-      div.appendChild(type);
+      if (!finded) {
+        div.appendChild(petName);
+        div.appendChild(petRace);
+        div.appendChild(type);
+        finded = true;
+      }
     }
   });
 }

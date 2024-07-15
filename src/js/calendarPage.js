@@ -4,33 +4,30 @@ import mountCalendar from "./mountCalendar.js";
 export function loadScriptCalendar() {
   const calendarAddEvent = document.getElementById("calendar-new-event");
   const calendarAllEvent = document.getElementById("calendar-all-event");
-  const calendarDateEvent = document.getElementById("calendar-date-event");
+  const calendarSelectedMonth = document.getElementById(
+    "calendar-selected-month",
+  );
+
   calendarAddEvent.addEventListener(
     "click",
-    function() {
+    function () {
       document.getElementById("modal-newjob").style.display = "flex";
     },
     false,
   );
   calendarAllEvent.addEventListener(
     "click",
-    function() {
+    function () {
       loadPage("../pages/allJobs.html");
     },
     false,
   );
-  calendarDateEvent.addEventListener(
-    "change",
-    function() {
-      const date = calendarDateEvent.value;
-      const month = date.slice(5, 7);
-      mountCalendar(parseInt(month));
-    },
-    false,
-  );
+  calendarSelectedMonth.addEventListener("change", () => {
+    mountCalendar(parseInt(calendarSelectedMonth.value));
+  });
   const date = new Date();
-  calendarDateEvent.value = date.toISOString().substring(0, 10);
   const month = date.getMonth() + 1;
+  calendarSelectedMonth.value = month;
   mountCalendar(month);
 }
 export default loadScriptCalendar;
