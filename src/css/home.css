@@ -60,17 +60,17 @@
   }
 }
 
-#home-section>#home-aboutus {
+#home-section > #home-aboutus {
   justify-content: flex-start;
   gap: 1rem;
 }
 
-#home-section>#comments {
+#home-section > #comments {
   width: 95%;
   height: 80vh;
 }
 
-#comments>div {
+#comments > div {
   width: 95%;
   display: flex;
   justify-content: center;
@@ -103,26 +103,63 @@
   color: var(--cat-text);
 }
 
+.client-button {
+  width: 2vw;
+  height: 6vh;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 800px) {
   #home-section {
     display: flex;
     flex-direction: column;
     flex-wrap: no-wrap;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1rem;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+
+    & article {
+      width: 85%;
+      margin: 1rem;
+      height: 50vh;
+      gap: 2vh;
+      padding: 1rem;
+    }
+
+    & #comments {
+      height: 60vh;
+      width: 85%;
+      margin: 1rem;
+
+      & .comment-card {
+        width: 80%;
+        display: flex;
+        flex-wrap: no-wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1vh;
+      }
+
+      & .last-client {
+        display: none;
+      }
+
+      & .next-client {
+        display: none;
+      }
+
+      & .client-button {
+        width: 5vw;
+        height: 5vh;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
   }
 
-  #home-section>article {
-    width: 95%;
-    height: 50vh;
-  }
-
-  #home-section>#comments {
-    height: 270vh;
-  }
-
-  #comments>div div {
+  #comments > div div {
     height: 50vh;
   }
 

@@ -42,6 +42,11 @@ function clientsCarrossel() {
     function buildClient(client) {
       const clientCard = document.createElement("div");
       clientCard.className = "comment-card";
+      if(client === clientsList[lastClient]){
+        clientCard.className = "comment-card last-client";
+      } else if(client === clientsList[nextClient]){
+        clientCard.className = "comment-card next-client";
+      }
       const name = document.createElement("h4");
       name.className = "comment-name";
       const photo = document.createElement("img");
@@ -60,8 +65,7 @@ function clientsCarrossel() {
   function buildLastClientButton() {
     const lastClientButton = document.createElement("button");
     lastClientButton.innerText = "<";
-    lastClientButton.style.height = "5vh";
-    lastClientButton.style.width = "2vw";
+    lastClientButton.className = "client-button";
     lastClientButton.onclick = function () {
       lastClient = lastClient - 1;
       nextClient = actualClient;
@@ -81,8 +85,7 @@ function clientsCarrossel() {
   function buildNextClientButton() {
     const nextClientButton = document.createElement("button");
     nextClientButton.innerText = ">";
-    nextClientButton.style.height = "5vh";
-    nextClientButton.style.width = "2vw";
+    nextClientButton.className = "client-button";
     nextClientButton.onclick = function () {
       lastClient = actualClient;
       nextClient = nextClient+1;
