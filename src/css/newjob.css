@@ -14,7 +14,8 @@
   justify-content: center;
   background: var(--cat-surface1);
 }
-#newjob-div div>button{
+
+#newjob-div div > button {
   border: 1px solid black;
   padding: 0.5rem;
   text-align: center;
@@ -23,7 +24,29 @@
   width: 10vw;
   font-size: 1rem;
 }
-#newjob-div div>button:hover{
+
+#newjob-div div > button:hover {
   background: var(--cat-blue);
   cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  #exit-modal-button {
+    width: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  #newjob-div{
+    gap: 1.2vh;
+  }
+  #newjob-div div > button {
+    width: 30vw;
+  }
+
+  #newjob-div label, p, input {
+    font-size: 1.5rem;
+  }
 }

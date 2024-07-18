@@ -81,10 +81,11 @@
   #about-section {
     margin: 0vh;
     display: flex;
-    width: 90%;
+    width: 88%;
     flex-direction: column;
     align-content: flex-start;
     align-items: center;
+    margin-top: 1vh;
     gap: 2vh;
 
     & .half-about {
@@ -95,6 +96,10 @@
       flex-direction: column;
       align-content: flex-start;
       align-items: center;
+    }
+
+    & textarea {
+      width: 90%;
     }
   }
 
