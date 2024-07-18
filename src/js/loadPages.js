@@ -9,12 +9,12 @@ function loadPage(path) {
     if (this.readyState === 4 && this.status === 200) {
       const main = document.getElementById("main-content");
       main.innerHTML = this.responseText;
-      if (path === "../pages/calendar.html") {
+      if (path === "./src/pages/calendar.html") {
         loadScriptCalendar();
         loadScriptNewJob();
-      } else if (path === "../pages/allJobs.html") {
+      } else if (path === "./src/pages/allJobs.html") {
         mountJobsTable();
-      } else if (path === "../pages/home.html") {
+      } else if (path === "./src/pages/home.html") {
         mountHome();
       }
     }
@@ -23,13 +23,13 @@ function loadPage(path) {
   file.send();
 }
 function loadHomePages() {
-  loadPage("../pages/home.html");
+  loadPage("./src/pages/home.html");
 }
 function loadAboutPages() {
-  loadPage("../pages/about.html");
+  loadPage("./src/pages/about.html");
 }
 function loadCalendarPages() {
-  loadPage("../pages/calendar.html");
+  loadPage("./src/pages/calendar.html");
 }
 
 window.addEventListener("load", (_event) => {
