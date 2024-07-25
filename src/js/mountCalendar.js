@@ -1,4 +1,4 @@
-import { readJobsByMonth } from "./jobsCrud.js";
+import { readJobsByMonth } from "src/js/jobsCrud.js";
 
 function mountCalendar(month) {
   const [lastDay, firstDayWeek] = getDays(month);

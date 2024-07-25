@@ -1,5 +1,5 @@
-import loadPage from "./loadPages.js";
-import mountCalendar from "./mountCalendar.js";
+import loadPage from "src/js/loadPages.js";
+import mountCalendar from "src/js/mountCalendar.js";
 
 export function loadScriptCalendar() {
   const calendarAddEvent = document.getElementById("calendar-new-event");
