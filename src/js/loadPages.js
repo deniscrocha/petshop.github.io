@@ -23,13 +23,13 @@ function loadPage(path) {
   file.send();
 }
 function loadHomePages() {
-  loadPage("./pages/home.html");
+  loadPage("./src/pages/home.html");
 }
 function loadAboutPages() {
-  loadPage("./pages/about.html");
+  loadPage("./src/pages/about.html");
 }
 function loadCalendarPages() {
-  loadPage("./pages/calendar.html");
+  loadPage("./src/pages/calendar.html");
 }
 
 window.addEventListener("load", (_event) => {
