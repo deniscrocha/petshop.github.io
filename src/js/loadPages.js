@@ -1,7 +1,7 @@
-import loadScriptCalendar from "./src/js/calendarPage.js";
-import loadScriptNewJob from "./src/js/newJobPage.js";
-import mountJobsTable from "./src/js/allJobs.js";
-import mountHome from "./src/js/home.js";
+import loadScriptCalendar from "/src/js/calendarPage.js";
+import loadScriptNewJob from "/src/js/newJobPage.js";
+import mountJobsTable from "/src/js/allJobs.js";
+import mountHome from "/src/js/home.js";
 
 function loadPage(path) {
   const file = new XMLHttpRequest();
@@ -9,12 +9,12 @@ function loadPage(path) {
     if (this.readyState === 4 && this.status === 200) {
       const main = document.getElementById("main-content");
       main.innerHTML = this.responseText;
-      if (path === "./src/pages/calendar.html") {
+      if (path === "./pages/calendar.html") {
         loadScriptCalendar();
         loadScriptNewJob();
-      } else if (path === "./src/pages/allJobs.html") {
+      } else if (path === "./pages/allJobs.html") {
         mountJobsTable();
-      } else if (path === "./src/pages/home.html") {
+      } else if (path === "./pages/home.html") {
         mountHome();
       }
     }

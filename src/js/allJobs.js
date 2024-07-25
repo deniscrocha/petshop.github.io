@@ -1,5 +1,5 @@
-import { readAllJobs, updateJob, deleteJob } from "./src/js/jobsCrud.js";
-import loadPage from "./src/js/loadPages.js";
+import { readAllJobs, updateJob, deleteJob } from "/src/js/jobsCrud.js";
+import loadPage from "/src/js/loadPages.js";
 
 export function mountJobsTable() {
   comebackButtonConfig();
