@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { createNewJob } from "/src/js/jobsCrudjs";
+=======
+import { createNewJob } from "./src/js/jobsCrud.js";
+>>>>>>> parent of 227da0a (script path att3)
 
 function loadScriptNewJob() {
   const createJob = document.getElementById("create-new-job");
