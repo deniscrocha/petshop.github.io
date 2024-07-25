@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 import loadScriptCalendar from "./js/calendarPage.js";
 import loadScriptNewJob from "./js/newJobPage.js";
 import mountJobsTable from "./js/allJobs.js";
 import mountHome from "./js/home.js";
-=======
-import loadScriptCalendar from "./src/js/calendarPage.js";
-import loadScriptNewJob from "./src/js/newJobPage.js";
-import mountJobsTable from "./src/js/allJobs.js";
-import mountHome from "./src/js/home.js";
->>>>>>> parent of 227da0a (script path att3)
 
 function loadPage(path) {
   const file = new XMLHttpRequest();
@@ -16,12 +9,12 @@ function loadPage(path) {
     if (this.readyState === 4 && this.status === 200) {
       const main = document.getElementById("main-content");
       main.innerHTML = this.responseText;
-      if (path === "./src/pages/calendar.html") {
+      if (path === "./pages/calendar.html") {
         loadScriptCalendar();
         loadScriptNewJob();
-      } else if (path === "./src/pages/allJobs.html") {
+      } else if (path === "./pages/allJobs.html") {
         mountJobsTable();
-      } else if (path === "./src/pages/home.html") {
+      } else if (path === "./pages/home.html") {
         mountHome();
       }
     }
@@ -30,13 +23,13 @@ function loadPage(path) {
   file.send();
 }
 function loadHomePages() {
-  loadPage("./src/pages/home.html");
+  loadPage("./pages/home.html");
 }
 function loadAboutPages() {
-  loadPage("./src/pages/about.html");
+  loadPage("./pages/about.html");
 }
 function loadCalendarPages() {
-  loadPage("./src/pages/calendar.html");
+  loadPage("./pages/calendar.html");
 }
 
 window.addEventListener("load", (_event) => {

@@ -1,4 +1,4 @@
-import loadPage from "./src/js/loadPages.js";
+import loadPage from "./loadPages.js";
 
 export function mountHome() {
   const goToCalendarButton = document.getElementById("go-to-calendar");
