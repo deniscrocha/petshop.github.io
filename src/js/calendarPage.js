@@ -1,5 +1,5 @@
-import loadPage from "src/js/loadPages.js";
-import mountCalendar from "src/js/mountCalendar.js";
+import loadPage from "./src/js/loadPages.js";
+import mountCalendar from "./src/js/mountCalendar.js";
 
 export function loadScriptCalendar() {
   const calendarAddEvent = document.getElementById("calendar-new-event");
@@ -18,7 +18,7 @@ export function loadScriptCalendar() {
   calendarAllEvent.addEventListener(
     "click",
     function () {
-      loadPage("../pages/allJobs.html");
+      loadPage("./src/pages/allJobs.html");
     },
     false,
   );

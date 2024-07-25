@@ -1,5 +1,5 @@
-import { readAllJobs, updateJob, deleteJob } from "src/js/jobsCrud.js";
-import loadPage from "src/js/loadPages.js";
+import { readAllJobs, updateJob, deleteJob } from "./src/js/jobsCrud.js";
+import loadPage from "./src/js/loadPages.js";
 
 export function mountJobsTable() {
   comebackButtonConfig();
@@ -20,7 +20,7 @@ export function mountJobsTable() {
 function comebackButtonConfig() {
   const comebackButton = document.getElementById("comeback-alljobs");
   comebackButton.addEventListener("click", () => {
-    loadPage("../pages/calendar.html");
+    loadPage("./src/pages/calendar.html");
   });
 }
 function closeUpdateButtonConfig() {

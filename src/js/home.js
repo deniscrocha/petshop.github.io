@@ -1,13 +1,13 @@
-import loadPage from "src/js/loadPages.js";
+import loadPage from "./src/js/loadPages.js";
 
 export function mountHome() {
   const goToCalendarButton = document.getElementById("go-to-calendar");
   goToCalendarButton.addEventListener("click", () => {
-    loadPage("../pages/calendar.html");
+    loadPage("./src/pages/calendar.html");
   });
   const knowMoreButton = document.getElementById("know-more");
   knowMoreButton.addEventListener("click", () => {
-    loadPage("../pages/about.html");
+    loadPage("./src/pages/about.html");
   });
   clientsCarrossel();
 }
