@@ -1,4 +1,4 @@
-import { createNewJob } from "./src/js/jobsCrudjs";
+import { createNewJob } from "/src/js/jobsCrudjs";
 
 function loadScriptNewJob() {
   const createJob = document.getElementById("create-new-job");

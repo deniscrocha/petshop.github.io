@@ -18,7 +18,7 @@ export function loadScriptCalendar() {
   calendarAllEvent.addEventListener(
     "click",
     function () {
-      loadPage("./src/pages/allJobs.html");
+      loadPage("./pages/allJobs.html");
     },
     false,
   );

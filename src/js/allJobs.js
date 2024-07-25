@@ -20,7 +20,7 @@ export function mountJobsTable() {
 function comebackButtonConfig() {
   const comebackButton = document.getElementById("comeback-alljobs");
   comebackButton.addEventListener("click", () => {
-    loadPage("./src/pages/calendar.html");
+    loadPage("./pages/calendar.html");
   });
 }
 function closeUpdateButtonConfig() {

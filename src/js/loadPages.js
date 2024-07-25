@@ -1,7 +1,7 @@
-import loadScriptCalendar from "/src/js/calendarPage.js";
-import loadScriptNewJob from "/src/js/newJobPage.js";
-import mountJobsTable from "/src/js/allJobs.js";
-import mountHome from "/src/js/home.js";
+import loadScriptCalendar from "./js/calendarPage.js";
+import loadScriptNewJob from "./js/newJobPage.js";
+import mountJobsTable from "./js/allJobs.js";
+import mountHome from "./js/home.js";
 
 function loadPage(path) {
   const file = new XMLHttpRequest();

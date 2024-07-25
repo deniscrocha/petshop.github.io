@@ -3,11 +3,11 @@ import loadPage from "/src/js/loadPages.js";
 export function mountHome() {
   const goToCalendarButton = document.getElementById("go-to-calendar");
   goToCalendarButton.addEventListener("click", () => {
-    loadPage("./src/pages/calendar.html");
+    loadPage("./pages/calendar.html");
   });
   const knowMoreButton = document.getElementById("know-more");
   knowMoreButton.addEventListener("click", () => {
-    loadPage("./src/pages/about.html");
+    loadPage("./pages/about.html");
   });
   clientsCarrossel();
 }
