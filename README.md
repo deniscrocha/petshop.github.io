@@ -10,7 +10,7 @@ Landing page criada como exercício para o curso de programação full stack da 
 6. Foi criada uma animação de Carousel na home, sobre as avaliações dos clientes.
 
 ### Sobre
-Para acessar a página online basta entrar no url [[https://deniscrocha.github.io/petshop.github.io/src/index.html| https://deniscrocha.github.io/petshop.github.io/src/index.html]]
+Para acessar a página online basta entrar no url https://deniscrocha.github.io/petshop.github.io/src/index.html
 Para executar em sua máquina será preciso clonar o reposítorio e dentro dele executar o live-server.
 Se você não tem o live-server será preciso instalar com o comando "npm install -g live-server"
 obs: esse comando instala o live-server globalmente em sua máquina e não apenas no projeto.
